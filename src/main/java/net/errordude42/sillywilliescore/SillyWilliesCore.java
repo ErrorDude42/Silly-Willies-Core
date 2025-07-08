@@ -1,5 +1,9 @@
 package net.errordude42.sillywilliescore;
 
+import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -33,6 +37,9 @@ public class SillyWilliesCore {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -46,7 +53,23 @@ public class SillyWilliesCore {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            //event.accept(ModItems.ITEMNAME);
+            event.accept(ModItems.TRIANGULUMRAW);
+            event.accept(ModItems.TRIANGULUM);
+            event.accept(ModItems.TRIANGULUMBRICK);
+            event.accept(ModItems.TRIANGULUMUPGRADETEMPLATE);
+            event.accept(ModItems.ENTANGULUM_DUST);
+            event.accept(ModItems.ENTANGULUM_SPOOL);
+            event.accept(ModItems.ENTANGULUM_PLATE);
+            event.accept(ModItems.DIRTY_ENTANGULUM_DUST);
+            event.accept(ModItems.ENTANGULUM_STRING);
+            event.accept(ModItems.PLATE_MOLD);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.SILT);
+            event.accept(ModBlocks.ENTANGULUM_ORE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
