@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "sillywilliescore:dirtyentangulumdust"
+  },
+  "result": {
+    "id": "sillywilliescore:entangulumdust",
+    "count": 1
+  }
+}

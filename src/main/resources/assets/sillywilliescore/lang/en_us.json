@@ -2,13 +2,25 @@
   "item.sillywilliescore.triangulumraw" : "Raw Triangulum",
   "item.sillywilliescore.triangulum" : "Triangulum",
   "item.sillywilliescore.triangulumbrick" : "Triangulum Brick",
-  "item.sillywilliescore.triangulumupgradetemplate" : "Triangulum Upgrade Template",
+  "item.sillywilliescore.triangulumupgradetemplate" : "Triangulum Upgrade Smithing Template",
   "item.sillywilliescore.entangulumdust" : "Entangulum Dust",
   "item.sillywilliescore.entangulumspool" : "Entangulum Spool",
   "item.sillywilliescore.platemold" : "Plate Mold",
   "item.sillywilliescore.entangulumstring" : "Entangulum String",
   "item.sillywilliescore.dirtyentangulumdust" : "Dirty Entangulum Dust",
   "item.sillywilliescore.entangulumplate" : "Entangulum Plate",
+  "item.sillywilliescore.empty_spool" : "Empty Spool",
+  "item.sillywilliescore.incomplete_triangulum" : "Incomplete Triangulum",
+  "item.sillywilliescore.raw_entangulum" : "Raw Entangulum",
+  "item.sillywilliescore.entangulum_masterwork_smithing_template" : "Entangulum Masterworks Smithing Template",
+  "item.sillywilliescore.triangulum_pickaxe" : "Triangulum Pickaxe",
+  "item.sillywilliescore.triangulum_sword" : "Triangulum Sword",
+  "item.sillywilliescore.triangulum_shovel" : "Triangulum Shovel",
+  "item.sillywilliescore.triangulum_axe" : "Triangulum Axe",
+  "item.sillywilliescore.triangulum_hoe" : "Triangulum Hoe",
+
+  "creativetab.sillywilliescore.sillywilliescore_items" : "Silly Willies Core",
+  "creativetab.sillywilliescore.sillywilliescore_building_blocks" : "Silly Willies Building Blocks",
 
   "block.sillywilliescore.silt": "Silt",
   "block.sillywilliescore.entangulumore": "Entangulum Ore",
@@ -16,6 +28,5 @@
   "block.sillywilliescore.geostone": "Geo-Stone",
   "block.sillywilliescore.block_of_raw_triangulum": "Block of Raw Triangulum",
   "block.sillywilliescore.block_of_raw_entangulum": "Block of Raw Entangulum",
-  "creativetab.sillywilliescore.sillywilliescore_items" : "Silly Willies Core",
   "block.sillywilliescore.triangulum_bricks": "Triangulum Bricks"
 }

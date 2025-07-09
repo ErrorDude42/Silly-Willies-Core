@@ -42,6 +42,36 @@ public class ModItems {
     public static final DeferredItem<Item> PLATE_MOLD = ITEMS.register("platemold",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> EMPTY_SPOOL = ITEMS.register("empty_spool",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> INCOMPLETE_TRIANGULUM = ITEMS.register("incomplete_triangulum",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> RAW_ENTANGULUM = ITEMS.register("raw_entangulum",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> ENTANGULUM_MASTERWORK_SMITHING_TEMPLATE = ITEMS.register("entangulum_masterwork_smithing_template",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> TRIANGULUM_SWORD = ITEMS.register("triangulum_sword",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> TRIANGULUM_SHOVEL = ITEMS.register("triangulum_shovel",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> TRIANGULUM_AXE = ITEMS.register("triangulum_axe",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> TRIANGULUM_HOE = ITEMS.register("triangulum_hoe",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> TRIANGULUM_PICKAXE = ITEMS.register("triangulum_pickaxe",
+            () -> new Item(new Item.Properties()));
+
+
+
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
