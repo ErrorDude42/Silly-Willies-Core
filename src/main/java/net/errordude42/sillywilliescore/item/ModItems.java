@@ -42,6 +42,9 @@ public class ModItems {
     public static final DeferredItem<Item> PLATE_MOLD = ITEMS.register("platemold",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> EMPTY_SPOOL = ITEMS.register("empty_spool",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

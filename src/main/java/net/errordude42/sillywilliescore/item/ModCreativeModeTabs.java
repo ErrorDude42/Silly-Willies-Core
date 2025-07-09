@@ -35,6 +35,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ENTANGULUM_ORE);
                         output.accept(ModBlocks.BLOCK_OF_RAW_ENTANGULUM);
                         output.accept(ModItems.PLATE_MOLD);
+                        output.accept(ModItems.EMPTY_SPOOL);
                         output.accept(ModBlocks.GEOSTONE);
                         output.accept(ModBlocks.SILT);
                     })
