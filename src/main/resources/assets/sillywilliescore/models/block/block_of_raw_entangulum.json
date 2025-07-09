@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "sillywilliescore:block/block_of_raw_entangulum"
+
+  }
+}

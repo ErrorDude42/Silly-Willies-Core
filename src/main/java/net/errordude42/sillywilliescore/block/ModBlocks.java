@@ -27,7 +27,32 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> ENTANGULUM_ORE = registerBlock("entangulumore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4),
-                    BlockBehaviour.Properties.of().strength(4f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE)
+                    BlockBehaviour.Properties.of().strength(4f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
+                            requiresCorrectToolForDrops()
+            ));
+    public static final DeferredBlock<Block> GEOSTONE = registerBlock("geostone",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
+                            requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<Block> TRIANGULUMORE_DEEPSLATE = registerBlock("triangulumore_deepslate",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
+                    requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<Block> BLOCK_OF_RAW_TRIANGULUM = registerBlock("block_of_raw_triangulum",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_YELLOW).
+                    requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<Block> BLOCK_OF_RAW_ENTANGULUM = registerBlock("block_of_raw_entangulum",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_PURPLE).
+                    requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<Block> TRIANGULUM_BRICKS = registerBlock("triangulum_bricks",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_PURPLE).
+                    requiresCorrectToolForDrops()
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

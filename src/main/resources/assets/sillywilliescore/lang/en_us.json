@@ -12,6 +12,10 @@
 
   "block.sillywilliescore.silt": "Silt",
   "block.sillywilliescore.entangulumore": "Entangulum Ore",
-  "block.sillywilliescore.silt": "Silt",
-  "block.sillywilliescore.silt": "Silt"
+  "block.sillywilliescore.triangulumore_deepslate": "Deepslate Triangulum Ore",
+  "block.sillywilliescore.geostone": "Geo-Stone",
+  "block.sillywilliescore.block_of_raw_triangulum": "Block of Raw Triangulum",
+  "block.sillywilliescore.block_of_raw_entangulum": "Block of Raw Entangulum",
+  "creativetab.sillywilliescore.sillywilliescore_items" : "Silly Willies Core",
+  "block.sillywilliescore.triangulum_bricks": "Triangulum Bricks"
 }
