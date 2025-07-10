@@ -27,16 +27,16 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> ENTANGULUM_ORE = registerBlock("entangulumore",
             () -> new DropExperienceBlock(UniformInt.of(2, 4),
-                    BlockBehaviour.Properties.of().strength(4f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
+                    BlockBehaviour.Properties.of().strength(6f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
                             requiresCorrectToolForDrops()
             ));
     public static final DeferredBlock<Block> GEOSTONE = registerBlock("geostone",
-            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
+            () -> new Block(BlockBehaviour.Properties.of().strength(3f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
                             requiresCorrectToolForDrops()
             ));
 
     public static final DeferredBlock<Block> TRIANGULUMORE_DEEPSLATE = registerBlock("triangulumore_deepslate",
-            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
+            () -> new Block(BlockBehaviour.Properties.of().strength(6f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
                     requiresCorrectToolForDrops()
             ));
 

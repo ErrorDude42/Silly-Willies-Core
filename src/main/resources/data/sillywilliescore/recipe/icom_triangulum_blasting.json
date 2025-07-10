@@ -14,7 +14,7 @@
     "cookingtime": 150,
     "experience": 4.0,
     "ingredient": {
-        "item": "sillywilliescore:triangulumraw"
+        "tag": "sillywilliescore:triangulum_smeltable"
     },
     "result": {
         "id": "sillywilliescore:incomplete_triangulum"
