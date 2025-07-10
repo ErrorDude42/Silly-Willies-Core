@@ -52,7 +52,13 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.sillywilliescore.sillywilliescore_building_blocks"))
                     .displayItems((itemDisplayParameters, output)-> {
                         output.accept(ModBlocks.TRIANGULUM_BRICKS);
+                        output.accept(ModBlocks.TRIANGULUM_BRICKS_SLAB);
+                        output.accept(ModBlocks.TRIANGULUM_BRICKS_BUTTON);
+                        output.accept(ModBlocks.TRIANGULUM_BRICKS_PRESSURE_PLATE);
+                        output.accept(ModBlocks.TRIANGULUM_BRICKS_STAIRS);
+                        output.accept(ModBlocks.TRIANGULUM_BRICKS_WALL);
                         output.accept(ModBlocks.GEOSTONE);
+                        output.accept(ModBlocks.GEOSTONE_COBBLE);
                         output.accept(ModBlocks.SILT);
                     })
                     .build()

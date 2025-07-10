@@ -5,10 +5,9 @@ import net.errordude42.sillywilliescore.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -51,7 +50,40 @@ public class ModBlocks {
             ));
 
     public static final DeferredBlock<Block> TRIANGULUM_BRICKS = registerBlock("triangulum_bricks",
-            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_PURPLE).
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_YELLOW).
+                    requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<StairBlock> TRIANGULUM_BRICKS_STAIRS = registerBlock("triangulum_bricks_stairs",
+            () -> new StairBlock(ModBlocks.TRIANGULUM_BRICKS.get().defaultBlockState(),
+                BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_YELLOW).
+                        requiresCorrectToolForDrops()
+                    ));
+    public static final DeferredBlock<SlabBlock> TRIANGULUM_BRICKS_SLAB = registerBlock("triangulum_bricks_slab",
+            () -> new SlabBlock(
+                    BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_YELLOW).
+                            requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<PressurePlateBlock> TRIANGULUM_BRICKS_PRESSURE_PLATE = registerBlock("triangulum_bricks_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON,
+                    BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_YELLOW).
+                            requiresCorrectToolForDrops()
+            ));
+    public static final DeferredBlock<ButtonBlock> TRIANGULUM_BRICKS_BUTTON = registerBlock("triangulum_bricks_button",
+            () -> new ButtonBlock(BlockSetType.IRON,20,
+                    BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_YELLOW).
+                            requiresCorrectToolForDrops()
+                            .noCollission()
+            ));
+
+    public static final DeferredBlock<WallBlock> TRIANGULUM_BRICKS_WALL = registerBlock("triangulum_bricks_wall",
+            () -> new WallBlock(
+                    BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL).mapColor(MapColor.COLOR_YELLOW).
+                            requiresCorrectToolForDrops()
+            ));
+    public static final DeferredBlock<Block> GEOSTONE_COBBLE = registerBlock("geostone_cobble",
+            () -> new Block(BlockBehaviour.Properties.of().strength(3f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
                     requiresCorrectToolForDrops()
             ));
 

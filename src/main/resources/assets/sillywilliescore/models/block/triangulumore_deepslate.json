@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "sillywilliescore:block/triangulum_ore_deepslate",
+    "up": "sillywilliescore:block/triangulum_ore_deepslate",
+    "north": "sillywilliescore:block/triangulum_ore_deepslate_side",
+    "east": "sillywilliescore:block/triangulum_ore_deepslate_side",
+    "south": "sillywilliescore:block/triangulum_ore_deepslate_side",
+    "west": "sillywilliescore:block/triangulum_ore_deepslate_side",
+    "particle": "sillywilliescore:block/triangulum_ore_deepslate"
+  }
+}
