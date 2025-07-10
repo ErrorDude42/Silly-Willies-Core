@@ -11,6 +11,6 @@
         "id": "sillywilliescore:triangulum_pickaxe"
     },
     "template": {
-        "item": "sillywilliescore:entangulum_masterwork_smithing_template"
+        "item": "sillywilliescore:triangulumupgradetemplate"
     }
 }

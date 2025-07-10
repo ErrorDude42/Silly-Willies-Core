@@ -14,7 +14,7 @@
     "cookingtime": 200,
     "experience": 6.0,
     "ingredient": {
-        "item": "sillywilliescore:raw_entangulum"
+        "tag": "sillywilliescore:entangulum_smeltable"
     },
     "result": {
         "id": "sillywilliescore:dirtyentangulumdust"
