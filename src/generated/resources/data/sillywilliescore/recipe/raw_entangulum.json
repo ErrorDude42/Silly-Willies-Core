@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "sillywilliescore:block_of_raw_entangulum"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "sillywilliescore:raw_entangulum"
+  }
+}

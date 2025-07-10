@@ -1,0 +1,30 @@
+package net.errordude42.sillywilliescore.datagen;
+
+import net.errordude42.sillywilliescore.SillyWilliesCore;
+import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.item.ModItems;
+import net.errordude42.sillywilliescore.util.ModTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
+
+public class ModItemTagProvider extends ItemTagsProvider {
+    public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, blockTags, SillyWilliesCore.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider provider) {
+        tag(ModTags.Items.ENTANGULUM_SMELTABLE)
+                .add(ModItems.RAW_ENTANGULUM.get())
+                .add(ModBlocks.ENTANGULUM_ORE.asItem());
+        tag(ModTags.Items.TRIANGULUM_SMELTABLE)
+                .add(ModItems.TRIANGULUMRAW.get())
+                .add(ModBlocks.TRIANGULUMORE_DEEPSLATE.asItem());
+    }
+}

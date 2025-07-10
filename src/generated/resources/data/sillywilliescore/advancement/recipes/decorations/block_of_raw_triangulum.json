@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sillywilliescore:block_of_raw_triangulum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_triangulum": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sillywilliescore:triangulumraw"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_triangulum"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sillywilliescore:block_of_raw_triangulum"
+    ]
+  }
+}

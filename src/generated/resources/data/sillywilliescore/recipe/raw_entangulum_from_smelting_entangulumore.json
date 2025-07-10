@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 6.0,
+  "group": "entangulum",
+  "ingredient": {
+    "item": "sillywilliescore:entangulumore"
+  },
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:raw_entangulum"
+  }
+}

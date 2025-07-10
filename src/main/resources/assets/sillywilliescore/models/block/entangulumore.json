@@ -1,8 +1,0 @@
-{
-  "parent" : "minecraft:block/cube_all",
-  "textures": {
-    "all": "sillywilliescore:block/entangulum_ore",
-    "particle": "sillywilliescore:block/entangulum_ore"
-  }
-
-}
