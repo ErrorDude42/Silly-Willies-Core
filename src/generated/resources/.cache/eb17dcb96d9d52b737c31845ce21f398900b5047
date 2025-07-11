@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-11T01:16:26.5562254	Block States: sillywilliescore
+// 1.21.1	2025-07-11T12:17:07.0988379	Block States: sillywilliescore
 1176922fa1c7a727a4a97f17f5949605a0d7f4ad assets/sillywilliescore/blockstates/block_of_raw_entangulum.json
 03e6a2a89fd6c9d44c4c976ebe0d868ee7f60050 assets/sillywilliescore/blockstates/block_of_raw_triangulum.json
 df60f8d47cba8986238f34f5d28c6498a1b2f7fd assets/sillywilliescore/blockstates/entangulumore.json
@@ -40,7 +40,6 @@ e9fdc5a11e253717b55a8414afbd5a1fab99d2ab assets/sillywilliescore/models/item/geo
 c554940f225230d13af36ebb87ab6500a07693da assets/sillywilliescore/models/item/silt.json
 3e1a1635ed4237ca13b21a03fefca0eaa6ec3041 assets/sillywilliescore/models/item/triangulumore_deepslate.json
 37dcc446019cc4f135147b0f83c378d92518f637 assets/sillywilliescore/models/item/triangulum_bricks.json
-48779b514fcebc7398d20d737d221a7546031ccf assets/sillywilliescore/models/item/triangulum_bricks_button.json
 273afabaa2aafc3c758078a55c40d30b2d7bdec4 assets/sillywilliescore/models/item/triangulum_bricks_pressure_plate.json
 36cd4455e271719d0d07862bef054199b572c181 assets/sillywilliescore/models/item/triangulum_bricks_slab.json
 cedae5f296c681ad6588216ee761fe8732a5efba assets/sillywilliescore/models/item/triangulum_bricks_stairs.json

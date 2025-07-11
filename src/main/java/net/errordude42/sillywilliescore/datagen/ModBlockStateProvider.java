@@ -33,7 +33,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.TRIANGULUM_BRICKS_SLAB);
         blockItem(ModBlocks.TRIANGULUM_BRICKS_STAIRS);
         blockItem(ModBlocks.TRIANGULUM_BRICKS_PRESSURE_PLATE);
-        blockItem(ModBlocks.TRIANGULUM_BRICKS_BUTTON);
 
     }
 
