@@ -1,3 +1,4 @@
-// 1.21.1	2025-07-10T16:54:33.7295301	Tags for minecraft:block mod id sillywilliescore
-67bdfe325d98c30af1a079b0fc1edaf9f916de01 data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21.1	2025-07-11T01:12:12.8377093	Tags for minecraft:block mod id sillywilliescore
+fcdf58d604ddb155a02cb355bb083a87743f86d5 data/minecraft/tags/block/mineable/pickaxe.json
 c7cb22a74d860ac46d1bb16ac6f902ac5d1b6c85 data/minecraft/tags/block/needs_diamond_tool.json
+04f5b856ea71eede39e45db89961f9f93c6503be data/minecraft/tags/block/walls.json

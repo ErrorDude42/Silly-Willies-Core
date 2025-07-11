@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "sillywilliescore:triangulum"
+  },
+  "base": {
+    "item": "minecraft:netherite_axe"
+  },
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:triangulum_axe"
+  },
+  "template": {
+    "item": "sillywilliescore:triangulumupgradetemplate"
+  }
+}

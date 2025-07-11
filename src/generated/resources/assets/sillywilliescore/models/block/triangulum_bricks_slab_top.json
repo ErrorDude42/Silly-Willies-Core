@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "sillywilliescore:block/triangulum_bricks",
+    "side": "sillywilliescore:block/triangulum_bricks",
+    "top": "sillywilliescore:block/triangulum_bricks"
+  }
+}

@@ -28,6 +28,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLOCK_OF_RAW_ENTANGULUM.get())
                 .add(ModBlocks.GEOSTONE.get())
                 .add(ModBlocks.TRIANGULUM_BRICKS.get())
+                .add(ModBlocks.TRIANGULUM_BRICKS_WALL.get())
+                .add(ModBlocks.TRIANGULUM_BRICKS_STAIRS.get())
+                .add(ModBlocks.TRIANGULUM_BRICKS_BUTTON.get())
+                .add(ModBlocks.TRIANGULUM_BRICKS_PRESSURE_PLATE.get())
+                .add(ModBlocks.TRIANGULUM_BRICKS_SLAB.get())
+                .add(ModBlocks.TRIANGULUM_BRICKS.get())
                 .add(ModBlocks.GEOSTONE_COBBLE.get())
                 .add(ModBlocks.TRIANGULUMORE_DEEPSLATE.get());
 
@@ -35,5 +41,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ENTANGULUM_ORE.get())
                 .add(ModBlocks.TRIANGULUMORE_DEEPSLATE.get());
 
+
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.TRIANGULUM_BRICKS_WALL.get());
     }
 }

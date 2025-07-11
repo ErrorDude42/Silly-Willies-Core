@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "sillywilliescore:triangulum"
+    },
+    "b": {
+      "item": "sillywilliescore:raw_entangulum"
+    },
+    "c": {
+      "item": "sillywilliescore:entangulum_masterwork_smithing_template"
+    }
+  },
+  "pattern": [
+    "aca",
+    "aba",
+    "aaa"
+  ],
+  "result": {
+    "count": 5,
+    "id": "sillywilliescore:entangulum_masterwork_smithing_template"
+  }
+}

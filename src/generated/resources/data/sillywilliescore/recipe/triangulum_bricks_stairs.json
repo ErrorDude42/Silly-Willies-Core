@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "triangulum_bricks",
+  "key": {
+    "#": {
+      "item": "sillywilliescore:triangulum_bricks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "sillywilliescore:triangulum_bricks_stairs"
+  }
+}

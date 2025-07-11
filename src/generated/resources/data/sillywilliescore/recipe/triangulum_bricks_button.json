@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "triangulum_bricks",
+  "ingredients": [
+    {
+      "item": "sillywilliescore:triangulum_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:triangulum_bricks_button"
+  }
+}

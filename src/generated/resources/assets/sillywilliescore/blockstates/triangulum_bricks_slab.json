@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sillywilliescore:block/triangulum_bricks_slab"
+    },
+    "type=double": {
+      "model": "sillywilliescore:block/triangulum_bricks"
+    },
+    "type=top": {
+      "model": "sillywilliescore:block/triangulum_bricks_slab_top"
+    }
+  }
+}

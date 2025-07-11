@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:breeze_rod"
+    }
+  },
+  "pattern": [
+    "  a",
+    " b ",
+    "a  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:empty_spool"
+  }
+}

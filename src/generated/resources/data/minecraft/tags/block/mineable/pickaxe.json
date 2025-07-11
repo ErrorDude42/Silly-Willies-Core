@@ -5,6 +5,12 @@
     "sillywilliescore:block_of_raw_entangulum",
     "sillywilliescore:geostone",
     "sillywilliescore:triangulum_bricks",
+    "sillywilliescore:triangulum_bricks_wall",
+    "sillywilliescore:triangulum_bricks_stairs",
+    "sillywilliescore:triangulum_bricks_button",
+    "sillywilliescore:triangulum_bricks_pressure_plate",
+    "sillywilliescore:triangulum_bricks_slab",
+    "sillywilliescore:triangulum_bricks",
     "sillywilliescore:geostone_cobble",
     "sillywilliescore:triangulumore_deepslate"
   ]

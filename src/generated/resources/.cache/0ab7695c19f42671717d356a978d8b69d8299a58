@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-10T17:06:46.3862531	Item Models: sillywilliescore
+// 1.21.1	2025-07-11T01:12:12.8420103	Item Models: sillywilliescore
 daea4aca75fd6bb8adcf8ff61216e49bfad55429 assets/sillywilliescore/models/item/dirtyentangulumdust.json
 77c0ffe09d009073ab130d44ed36e6a7e9d667b0 assets/sillywilliescore/models/item/empty_spool.json
 9fb0232f8c6e615faa49cb5d7178092afd3188ce assets/sillywilliescore/models/item/entangulumdust.json
@@ -14,6 +14,8 @@ de2da540ce875fd977e01a3c4b675bae2becd0b7 assets/sillywilliescore/models/item/tri
 1ce2bc5791e3d072e1974f2ce57b060bc350a5bb assets/sillywilliescore/models/item/triangulumraw.json
 d5a8afc1c856a0a45744a71d46736ba3301147a8 assets/sillywilliescore/models/item/triangulumupgradetemplate.json
 a3dfa61a019be71e51eb3318986e688447b41948 assets/sillywilliescore/models/item/triangulum_axe.json
+fe84990c5b4a5c8cda9de9a8ab4f2dc7951ec50b assets/sillywilliescore/models/item/triangulum_bricks_button.json
+a9bf57007aaef77fca358edd1f37938fbdb2ee8e assets/sillywilliescore/models/item/triangulum_bricks_wall.json
 4ff489d3a0f4b5d5615798a807bdfc1de9617725 assets/sillywilliescore/models/item/triangulum_hoe.json
 2bb04325a513c218c8b29e80c958b4bfb21ca788 assets/sillywilliescore/models/item/triangulum_pickaxe.json
 d64271fdbe2e97860cfb5c849d0496dc7a2614cb assets/sillywilliescore/models/item/triangulum_shovel.json

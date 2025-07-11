@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "sillywilliescore:triangulum"
+  },
+  "base": {
+    "item": "minecraft:netherite_shovel"
+  },
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:triangulum_shovel"
+  },
+  "template": {
+    "item": "sillywilliescore:triangulumupgradetemplate"
+  }
+}

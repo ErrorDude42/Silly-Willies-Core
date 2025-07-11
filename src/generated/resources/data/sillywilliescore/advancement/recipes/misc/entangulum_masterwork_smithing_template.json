@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_entangulum_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sillywilliescore:entangulum_masterwork_smithing_template"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sillywilliescore:entangulum_masterwork_smithing_template"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_entangulum_template"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sillywilliescore:entangulum_masterwork_smithing_template"
+    ]
+  }
+}

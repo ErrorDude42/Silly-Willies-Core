@@ -3,15 +3,15 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "sillywilliescore:triangulumraw"
+        "recipe": "sillywilliescore:triangulum_bricks_button"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_triangulum_block": {
+    "has_triangulum_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "sillywilliescore:block_of_raw_triangulum"
+            "items": "sillywilliescore:triangulum_bricks"
           }
         ]
       },
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_triangulum_block"
+      "has_triangulum_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "sillywilliescore:triangulumraw"
+      "sillywilliescore:triangulum_bricks_button"
     ]
   }
 }
