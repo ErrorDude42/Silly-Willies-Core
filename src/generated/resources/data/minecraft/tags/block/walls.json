@@ -1,5 +1,8 @@
 {
   "values": [
-    "sillywilliescore:triangulum_bricks_wall"
+    "sillywilliescore:triangulum_bricks_wall",
+    "sillywilliescore:geostone_cobble_wall",
+    "sillywilliescore:mossy_geostone_bricks_wall",
+    "sillywilliescore:geostone_bricks_wall"
   ]
 }

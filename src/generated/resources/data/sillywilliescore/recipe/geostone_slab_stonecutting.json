@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "sillywilliescore:geostone"
+  },
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:geostone_slab"
+  }
+}

@@ -26,7 +26,21 @@
   "block.sillywilliescore.entangulumore": "Entangulum Ore",
   "block.sillywilliescore.triangulumore_deepslate": "Deepslate Triangulum Ore",
   "block.sillywilliescore.geostone": "Geo-Stone",
+  "block.sillywilliescore.geostone_stairs": "Geo-Stone Stairs",
+  "block.sillywilliescore.geostone_slab": "Geo-Stone Slab",
+  "block.sillywilliescore.geostone_button": "Geo-Stone Button",
+  "block.sillywilliescore.geostone_wall": "Geo-Stone Wall",
+  "block.sillywilliescore.geostone_pressure_plate": "Geo-Stone Pressure Plate",
+  "block.sillywilliescore.geostone_cobble": "Geo-Cobble",
+  "block.sillywilliescore.geostone_cobble_stairs": "Geo-Cobble Stairs",
+  "block.sillywilliescore.geostone_cobble_slab": "Geo-Cobble Slab",
+  "block.sillywilliescore.geostone_cobble_wall": "Geo-Cobble Wall",
   "block.sillywilliescore.block_of_raw_triangulum": "Block of Raw Triangulum",
   "block.sillywilliescore.block_of_raw_entangulum": "Block of Raw Entangulum",
-  "block.sillywilliescore.triangulum_bricks": "Triangulum Bricks"
+  "block.sillywilliescore.triangulum_bricks": "Triangulum Bricks",
+  "block.sillywilliescore.triangulum_bricks_wall": "Triangulum Bricks Wall",
+  "block.sillywilliescore.triangulum_bricks_slab": "Triangulum Bricks Slab",
+  "block.sillywilliescore.triangulum_bricks_stairs": "Triangulum Bricks Stairs",
+  "block.sillywilliescore.triangulum_bricks_button": "Triangulum Bricks Button",
+  "block.sillywilliescore.triangulum_bricks_pressure_plate": "Triangulum Bricks Pressure Plate"
 }

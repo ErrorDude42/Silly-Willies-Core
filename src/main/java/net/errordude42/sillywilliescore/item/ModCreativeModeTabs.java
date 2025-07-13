@@ -52,14 +52,35 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.sillywilliescore.sillywilliescore_building_blocks"))
                     .displayItems((itemDisplayParameters, output)-> {
                         output.accept(ModBlocks.TRIANGULUM_BRICKS);
-                        output.accept(ModBlocks.TRIANGULUM_BRICKS_SLAB);
-                        output.accept(ModBlocks.TRIANGULUM_BRICKS_BUTTON);
-                        output.accept(ModBlocks.TRIANGULUM_BRICKS_PRESSURE_PLATE);
                         output.accept(ModBlocks.TRIANGULUM_BRICKS_STAIRS);
+                        output.accept(ModBlocks.TRIANGULUM_BRICKS_SLAB);
                         output.accept(ModBlocks.TRIANGULUM_BRICKS_WALL);
+                        output.accept(ModBlocks.TRIANGULUM_BRICKS_PRESSURE_PLATE);
+                        output.accept(ModBlocks.TRIANGULUM_BRICKS_BUTTON);
                         output.accept(ModBlocks.GEOSTONE);
+                        output.accept(ModBlocks.GEOSTONE_STAIRS);
+                        output.accept(ModBlocks.GEOSTONE_SLAB);
+                        output.accept(ModBlocks.GEOSTONE_PRESSURE_PLATE);
+                        output.accept(ModBlocks.GEOSTONE_BUTTON);
                         output.accept(ModBlocks.GEOSTONE_COBBLE);
+                        output.accept(ModBlocks.GEOSTONE_COBBLE_STAIRS);
+                        output.accept(ModBlocks.GEOSTONE_COBBLE_SLAB);
+                        output.accept(ModBlocks.GEOSTONE_COBBLE_WALL);
                         output.accept(ModBlocks.SILT);
+                        output.accept(ModBlocks.CHISLED_GEOSTONE);
+                        output.accept(ModBlocks.CRACKED_GEOSTONE_BRICKS);
+                        output.accept(ModBlocks.GEOSTONE_BRICKS);
+                        output.accept(ModBlocks.GEOSTONE_BRICKS_STAIRS);
+                        output.accept(ModBlocks.GEOSTONE_BRICKS_SLAB);
+                        output.accept(ModBlocks.GEOSTONE_BRICKS_WALL);
+                        output.accept(ModBlocks.MOSSY_GEOSTONE_BRICKS);
+                        output.accept(ModBlocks.MOSSY_GEOSTONE_BRICKS_STAIRS);
+                        output.accept(ModBlocks.MOSSY_GEOSTONE_BRICKS_SLAB);
+                        output.accept(ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL);
+                        output.accept(ModBlocks.SMOOTH_GEOSTONE);
+                        output.accept(ModBlocks.SMOOTH_GEOSTONE_SLAB);
+
+
                     })
                     .build()
     );

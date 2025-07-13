@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sillywilliescore:block/smooth_geostone_slab"
+    },
+    "type=double": {
+      "model": "sillywilliescore:block/smooth_geostone"
+    },
+    "type=top": {
+      "model": "sillywilliescore:block/smooth_geostone_slab_top"
+    }
+  }
+}

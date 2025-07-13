@@ -117,14 +117,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             stairBuilder(ModBlocks.TRIANGULUM_BRICKS_STAIRS.get(),Ingredient.of(ModBlocks.TRIANGULUM_BRICKS))
                     .group("triangulum_bricks")
                     .unlockedBy("has_triangulum_bricks",has(ModBlocks.TRIANGULUM_BRICKS)).save(recipeOutput);
+        stairBuilder(ModBlocks.GEOSTONE_STAIRS.get(),Ingredient.of(ModBlocks.GEOSTONE))
+                .group("geostone")
+                .unlockedBy("has_geostone",has(ModBlocks.GEOSTONE)).save(recipeOutput);
+        stairBuilder(ModBlocks.GEOSTONE_COBBLE_STAIRS.get(),Ingredient.of(ModBlocks.GEOSTONE_COBBLE))
+                .group("geostone")
+                .unlockedBy("has_geostone_cobble",has(ModBlocks.GEOSTONE_COBBLE)).save(recipeOutput);
             buttonBuilder(ModBlocks.TRIANGULUM_BRICKS_BUTTON.get(),Ingredient.of(ModBlocks.TRIANGULUM_BRICKS))
                 .group("triangulum_bricks")
                 .unlockedBy("has_triangulum_bricks",has(ModBlocks.TRIANGULUM_BRICKS)).save(recipeOutput);
+        buttonBuilder(ModBlocks.GEOSTONE_BUTTON.get(),Ingredient.of(ModBlocks.GEOSTONE))
+                .group("geostone")
+                .unlockedBy("has_geostone",has(ModBlocks.GEOSTONE)).save(recipeOutput);
 
             slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.TRIANGULUM_BRICKS_SLAB.get(),ModBlocks.TRIANGULUM_BRICKS);
+            slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_SLAB.get(),ModBlocks.GEOSTONE);
+            slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_COBBLE_SLAB.get(),ModBlocks.GEOSTONE_COBBLE);
 
             wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.TRIANGULUM_BRICKS_WALL.get(),ModBlocks.TRIANGULUM_BRICKS);
+            wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_COBBLE_WALL.get(),ModBlocks.GEOSTONE_COBBLE);
             pressurePlate(recipeOutput,ModBlocks.TRIANGULUM_BRICKS_PRESSURE_PLATE.get(),ModBlocks.TRIANGULUM_BRICKS);
+            pressurePlate(recipeOutput,ModBlocks.GEOSTONE_PRESSURE_PLATE.get(),ModBlocks.GEOSTONE);
 
 
         oreSmelting(recipeOutput,
@@ -165,6 +178,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModItems.ENTANGULUM_DUST.get(),ModItems.DIRTY_ENTANGULUM_DUST.get());
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_STAIRS,ModBlocks.TRIANGULUM_BRICKS);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_SLAB,ModBlocks.TRIANGULUM_BRICKS);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_WALL,ModBlocks.TRIANGULUM_BRICKS);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_SLAB,ModBlocks.GEOSTONE);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_STAIRS,ModBlocks.GEOSTONE);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_SLAB,ModBlocks.GEOSTONE_COBBLE);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_STAIRS,ModBlocks.GEOSTONE_COBBLE);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_WALL,ModBlocks.GEOSTONE_COBBLE);
 
 
 

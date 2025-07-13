@@ -50,6 +50,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
      dropSelf(ModBlocks.TRIANGULUM_BRICKS_WALL.get());
      dropSelf(ModBlocks.TRIANGULUM_BRICKS_STAIRS.get());
      dropSelf(ModBlocks.GEOSTONE_COBBLE.get());
+     dropSelf(ModBlocks.GEOSTONE_COBBLE_WALL.get());
+     dropSelf(ModBlocks.GEOSTONE_COBBLE_STAIRS.get());
+     dropSelf(ModBlocks.GEOSTONE_STAIRS.get());
+     dropSelf(ModBlocks.GEOSTONE_BUTTON.get());
+     dropSelf(ModBlocks.GEOSTONE_PRESSURE_PLATE.get());
+     dropSelf(ModBlocks.CHISLED_GEOSTONE.get());
+     dropSelf(ModBlocks.SMOOTH_GEOSTONE.get());
+     dropSelf(ModBlocks.CRACKED_GEOSTONE_BRICKS.get());
+     dropSelf(ModBlocks.GEOSTONE_BRICKS.get());
+     dropSelf(ModBlocks.GEOSTONE_BRICKS_STAIRS.get());
+     dropSelf(ModBlocks.GEOSTONE_BRICKS_WALL.get());
+     dropSelf(ModBlocks.MOSSY_GEOSTONE_BRICKS.get());
+     dropSelf(ModBlocks.MOSSY_GEOSTONE_BRICKS_STAIRS.get());
+     dropSelf(ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL.get());
+
 
      add(ModBlocks.GEOSTONE.get(),
              block -> createCobbleDrops(ModBlocks.GEOSTONE.get(), ModBlocks.GEOSTONE_COBBLE.get())
@@ -64,6 +79,22 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
      add(ModBlocks.TRIANGULUM_BRICKS_SLAB.get(),
              block -> createSlabItemTable(ModBlocks.TRIANGULUM_BRICKS_SLAB.get())
      );
+        add(ModBlocks.GEOSTONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GEOSTONE_SLAB.get())
+        );
+        add(ModBlocks.GEOSTONE_BRICKS_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GEOSTONE_BRICKS_SLAB.get())
+        );
+        add(ModBlocks.SMOOTH_GEOSTONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.SMOOTH_GEOSTONE_SLAB.get())
+        );
+        add(ModBlocks.MOSSY_GEOSTONE_BRICKS_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GEOSTONE_BRICKS_SLAB.get())
+        );
+
+        add(ModBlocks.GEOSTONE_COBBLE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.GEOSTONE_COBBLE_SLAB.get())
+        );
     }
 
     protected LootTable.Builder createCobbleDrops(Block pBlock, Block Block2) {

@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "sillywilliescore:block/triangulumore_deepslate"
+    "end": "sillywilliescore:block/triangulumore_deepslate_top",
+    "side": "sillywilliescore:block/triangulumore_deepslate_side"
   }
 }

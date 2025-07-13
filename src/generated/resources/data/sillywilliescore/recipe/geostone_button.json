@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "geostone",
+  "ingredients": [
+    {
+      "item": "sillywilliescore:geostone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:geostone_button"
+  }
+}

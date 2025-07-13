@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sillywilliescore:block/mossy_geostone_bricks_slab"
+    },
+    "type=double": {
+      "model": "sillywilliescore:block/mossy_geostone_bricks"
+    },
+    "type=top": {
+      "model": "sillywilliescore:block/mossy_geostone_bricks_slab_top"
+    }
+  }
+}

@@ -1,4 +1,6 @@
-// 1.21.1	2025-07-11T01:12:12.8377093	Tags for minecraft:block mod id sillywilliescore
-fcdf58d604ddb155a02cb355bb083a87743f86d5 data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21.1	2025-07-12T17:23:47.9102351	Tags for minecraft:block mod id sillywilliescore
+74e3a8d3d1e39f5a4af7d039ef50377e72d37008 data/minecraft/tags/block/mineable/pickaxe.json
 c7cb22a74d860ac46d1bb16ac6f902ac5d1b6c85 data/minecraft/tags/block/needs_diamond_tool.json
-04f5b856ea71eede39e45db89961f9f93c6503be data/minecraft/tags/block/walls.json
+fcea7bccce82a9debc90ef90ae2d4d9c05480ed3 data/minecraft/tags/block/walls.json
+ecf2933c70db3b4c09825a1883d885d95760309b data/sillywilliescore/tags/block/incorrect_for_triangulum_tool.json
+a249c46329a41538f49a564e1f14338aaf1be5a0 data/sillywilliescore/tags/block/needs_triangulum_tool.json

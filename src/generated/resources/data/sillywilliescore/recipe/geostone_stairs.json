@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "geostone",
+  "key": {
+    "#": {
+      "item": "sillywilliescore:geostone"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "sillywilliescore:geostone_stairs"
+  }
+}

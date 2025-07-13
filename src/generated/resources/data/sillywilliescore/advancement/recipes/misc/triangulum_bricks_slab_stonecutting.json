@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sillywilliescore:triangulum_bricks_slab_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_triangulum_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sillywilliescore:triangulum_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_triangulum_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sillywilliescore:triangulum_bricks_slab_stonecutting"
+    ]
+  }
+}

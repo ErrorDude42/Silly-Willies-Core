@@ -1,3 +1,6 @@
 {
-  "parent": "sillywilliescore:block/triangulum_bricks_wall"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "sillywilliescore:block/triangulum_bricks"
+  }
 }

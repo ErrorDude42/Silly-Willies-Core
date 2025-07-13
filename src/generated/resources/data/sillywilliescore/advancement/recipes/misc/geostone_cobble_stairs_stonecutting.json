@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_geostone_cobble": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sillywilliescore:geostone_cobble"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sillywilliescore:geostone_cobble_stairs_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_geostone_cobble"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sillywilliescore:geostone_cobble_stairs_stonecutting"
+    ]
+  }
+}

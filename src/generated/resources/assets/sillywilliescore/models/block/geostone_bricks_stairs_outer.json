@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "sillywilliescore:block/geostone_bricks",
+    "side": "sillywilliescore:block/geostone_bricks",
+    "top": "sillywilliescore:block/geostone_bricks"
+  }
+}

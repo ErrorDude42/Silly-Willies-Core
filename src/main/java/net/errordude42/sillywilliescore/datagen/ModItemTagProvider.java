@@ -7,6 +7,7 @@ import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -26,5 +27,18 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ModTags.Items.TRIANGULUM_SMELTABLE)
                 .add(ModItems.TRIANGULUMRAW.get())
                 .add(ModBlocks.TRIANGULUMORE_DEEPSLATE.asItem());
+
+        tag(ItemTags.SWORDS)
+                .add(ModItems.TRIANGULUM_SWORD.get());
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.TRIANGULUM_PICKAXE.get());
+        tag(ItemTags.AXES)
+                .add(ModItems.TRIANGULUM_AXE.get());
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.TRIANGULUM_SHOVEL.get());
+        tag(ItemTags.HOES)
+                .add(ModItems.TRIANGULUM_HOE.get());
+
+
     }
 }

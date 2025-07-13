@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "sillywilliescore:block/geostone",
+    "side": "sillywilliescore:block/geostone",
+    "top": "sillywilliescore:block/geostone"
+  }
+}

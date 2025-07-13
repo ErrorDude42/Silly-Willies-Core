@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "sillywilliescore:block/chisled_geostone_top",
+    "side": "sillywilliescore:block/chisled_geostone_side"
+  }
+}

@@ -4,14 +4,21 @@
     "sillywilliescore:entangulumore",
     "sillywilliescore:block_of_raw_entangulum",
     "sillywilliescore:geostone",
+    "sillywilliescore:geostone_button",
+    "sillywilliescore:geostone_stairs",
+    "sillywilliescore:geostone_pressure_plate",
+    "sillywilliescore:geostone_slab",
     "sillywilliescore:triangulum_bricks",
-    "sillywilliescore:triangulum_bricks_wall",
     "sillywilliescore:triangulum_bricks_stairs",
-    "sillywilliescore:triangulum_bricks_button",
-    "sillywilliescore:triangulum_bricks_pressure_plate",
     "sillywilliescore:triangulum_bricks_slab",
+    "sillywilliescore:triangulum_bricks_wall",
+    "sillywilliescore:triangulum_bricks_pressure_plate",
+    "sillywilliescore:triangulum_bricks_button",
     "sillywilliescore:triangulum_bricks",
     "sillywilliescore:geostone_cobble",
-    "sillywilliescore:triangulumore_deepslate"
+    "sillywilliescore:triangulumore_deepslate",
+    "sillywilliescore:geostone_cobble_stairs",
+    "sillywilliescore:geostone_cobble_slab",
+    "sillywilliescore:geostone_cobble_wall"
   ]
 }

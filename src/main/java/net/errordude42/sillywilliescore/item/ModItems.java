@@ -1,7 +1,7 @@
 package net.errordude42.sillywilliescore.item;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -54,23 +54,23 @@ public class ModItems {
     public static final DeferredItem<Item> ENTANGULUM_MASTERWORK_SMITHING_TEMPLATE = ITEMS.register("entangulum_masterwork_smithing_template",
             () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> TRIANGULUM_SWORD = ITEMS.register("triangulum_sword",
-            () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> TRIANGULUM_SHOVEL = ITEMS.register("triangulum_shovel",
-            () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> TRIANGULUM_AXE = ITEMS.register("triangulum_axe",
-            () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> TRIANGULUM_HOE = ITEMS.register("triangulum_hoe",
-            () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> TRIANGULUM_PICKAXE = ITEMS.register("triangulum_pickaxe",
-            () -> new Item(new Item.Properties()));
-
-
-
+    public static final DeferredItem<SwordItem> TRIANGULUM_SWORD =ITEMS.register("triangulum_sword",
+            () -> new SwordItem(ModToolTiers.TRIANGULUM, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.TRIANGULUM,5,-2.6f))
+            ));
+    public static final DeferredItem<PickaxeItem> TRIANGULUM_PICKAXE = ITEMS.register("triangulum_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.TRIANGULUM, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.TRIANGULUM, 1.0F, -2.8f))));
+    public static final DeferredItem<ShovelItem> TRIANGULUM_SHOVEL = ITEMS.register("triangulum_shovel",
+            () -> new ShovelItem(ModToolTiers.TRIANGULUM, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.TRIANGULUM, 1.5F, -3.0f))));
+    public static final DeferredItem<AxeItem> TRIANGULUM_AXE = ITEMS.register("triangulum_axe",
+            () -> new AxeItem(ModToolTiers.TRIANGULUM, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.TRIANGULUM, 6.0F, -3.2f))));
+    public static final DeferredItem<HoeItem> TRIANGULUM_HOE = ITEMS.register("triangulum_hoe",
+            () -> new HoeItem(ModToolTiers.TRIANGULUM, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.TRIANGULUM, -5F, 0f))));
+    //public static final DeferredItem<MaceItem>
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
