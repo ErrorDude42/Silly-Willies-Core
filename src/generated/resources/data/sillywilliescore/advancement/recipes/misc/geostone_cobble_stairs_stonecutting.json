@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:geostone_cobble_stairs_from_geostone_cobble_stonecutting"
+        "recipe": "sillywilliescore:geostone_cobble_stairs_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:geostone_cobble_stairs_from_geostone_cobble_stonecutting"
+      "sillywilliescore:geostone_cobble_stairs_stonecutting"
     ]
   }
 }

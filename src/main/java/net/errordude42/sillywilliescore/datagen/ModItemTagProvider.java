@@ -9,6 +9,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -30,8 +31,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ModTags.Items.GEOSTONE_STONECUTTING).add(ModBlocks.GEOSTONE.asItem()).add(ModBlocks.GEOSTONE_BRICKS.asItem());
 
-        tag(ItemTags.STONE_CRAFTING_MATERIALS)
-                .add(ModBlocks.GEOSTONE_COBBLE.asItem());
 
         tag(ItemTags.SWORDS)
                 .add(ModItems.TRIANGULUM_SWORD.get());
@@ -44,6 +43,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.HOES)
                 .add(ModItems.TRIANGULUM_HOE.get());
 
-
+        tag(ItemTags.STONE_CRAFTING_MATERIALS)
+                .replace(false)
+                .add(ModBlocks.GEOSTONE_COBBLE.asItem());
     }
 }

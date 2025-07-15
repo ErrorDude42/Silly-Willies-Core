@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_geostone": {
+    "has_mossy_geostone_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "sillywilliescore:geostone"
+            "items": "sillywilliescore:mossy_geostone_bricks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:geostone_slab_from_geostone_stonecutting"
+        "recipe": "sillywilliescore:mossy_geostone_bricks_stairs_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_geostone"
+      "has_mossy_geostone_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:geostone_slab_from_geostone_stonecutting"
+      "sillywilliescore:mossy_geostone_bricks_stairs_stonecutting"
     ]
   }
 }

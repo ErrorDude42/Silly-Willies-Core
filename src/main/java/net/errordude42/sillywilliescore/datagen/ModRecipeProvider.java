@@ -205,29 +205,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         smithingRecipe(recipeOutput, ModItems.ENTANGULUM_MASTERWORK_SMITHING_TEMPLATE.get(), Items.STRING, ModItems.ENTANGULUM_DUST.get(), RecipeCategory.TOOLS, ModItems.ENTANGULUM_STRING.get(), "Entangulum_String");
 
 
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModItems.ENTANGULUM_DUST.get(),ModItems.DIRTY_ENTANGULUM_DUST.get());
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_STAIRS,ModBlocks.TRIANGULUM_BRICKS);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModItems.ENTANGULUM_DUST.get(),ModItems.DIRTY_ENTANGULUM_DUST.get(),1);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_STAIRS,ModBlocks.TRIANGULUM_BRICKS,1);
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_SLAB,ModBlocks.TRIANGULUM_BRICKS,2);
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_WALL,ModBlocks.TRIANGULUM_BRICKS);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_WALL,ModBlocks.TRIANGULUM_BRICKS,1);
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_SLAB,ModBlocks.GEOSTONE,2);
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.SMOOTH_GEOSTONE_SLAB,ModBlocks.SMOOTH_GEOSTONE,2);
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_BRICKS,ModBlocks.GEOSTONE);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_BRICKS,ModBlocks.GEOSTONE,1);
         stonecuttermulti(recipeOutput,RecipeCategory.MISC, ModBlocks.CHISLED_GEOSTONE, ModTags.Items.GEOSTONE_STONECUTTING,1,ModBlocks.GEOSTONE.get());
         stonecuttermulti(recipeOutput,RecipeCategory.MISC, ModBlocks.GEOSTONE_BRICKS_SLAB, ModTags.Items.GEOSTONE_STONECUTTING,2,ModBlocks.GEOSTONE.get());
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.MOSSY_GEOSTONE_BRICKS_SLAB,ModBlocks.MOSSY_GEOSTONE_BRICKS,2);
         stonecuttermulti(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_BRICKS_STAIRS, ModTags.Items.GEOSTONE_STONECUTTING,1,ModBlocks.GEOSTONE.get());
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.MOSSY_GEOSTONE_BRICKS_STAIRS,ModBlocks.MOSSY_GEOSTONE_BRICKS);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.MOSSY_GEOSTONE_BRICKS_STAIRS,ModBlocks.MOSSY_GEOSTONE_BRICKS,1);
         stonecuttermulti(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_BRICKS_WALL, ModTags.Items.GEOSTONE_STONECUTTING,1,ModBlocks.GEOSTONE.get());
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL,ModBlocks.MOSSY_GEOSTONE_BRICKS);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL,ModBlocks.MOSSY_GEOSTONE_BRICKS,1);
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_SLAB,ModBlocks.GEOSTONE_COBBLE,2);
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_STAIRS,ModBlocks.GEOSTONE_COBBLE);
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_WALL,ModBlocks.GEOSTONE_COBBLE);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_STAIRS,ModBlocks.GEOSTONE_COBBLE,1);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_WALL,ModBlocks.GEOSTONE_COBBLE,1);
 
 
 
     }
 
-
+    protected static void stonecutterResultFromBase(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, ItemLike material,int resultCount) {
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(material), category, result, resultCount)
+                .unlockedBy(getHasName(material), has(material))
+         .save(recipeOutput, SillyWilliesCore.MOD_ID + ":"+ getItemName(result) + "_stonecutting");
+    }
 
     protected static <T extends SingleItemRecipe> void stonecuttermulti(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, TagKey material, int resultCount, Block unlockBy) {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(material), category, result, resultCount)
