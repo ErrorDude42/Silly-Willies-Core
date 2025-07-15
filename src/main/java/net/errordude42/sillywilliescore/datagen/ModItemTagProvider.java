@@ -42,8 +42,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.HOES)
                 .add(ModItems.TRIANGULUM_HOE.get());
 
+        tag(ItemTags.STONE_TOOL_MATERIALS)
+                .add(ModBlocks.GEOSTONE_COBBLE.asItem());
         tag(ItemTags.STONE_CRAFTING_MATERIALS)
-                .replace(false)
                 .add(ModBlocks.GEOSTONE_COBBLE.asItem());
     }
 }
