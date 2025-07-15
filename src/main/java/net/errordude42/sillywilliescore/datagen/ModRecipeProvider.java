@@ -114,12 +114,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_entangulum_block",
                         has(ModBlocks.BLOCK_OF_RAW_ENTANGULUM)).save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.TRIANGULUMRAW.get(),1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.TRIANGULUMRAW.get(),9)
                 .requires(ModBlocks.BLOCK_OF_RAW_TRIANGULUM)
                 .unlockedBy("has_triangulum_block",
                         has(ModBlocks.BLOCK_OF_RAW_TRIANGULUM)).save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.TRIANGULUM.get(),9)
+        //ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.TRIANGULUMRAW.get(),1).requires(ModBlocks.BLOCK_OF_RAW_TRIANGULUM).unlockedBy("has_triangulum_block", has(ModBlocks.BLOCK_OF_RAW_TRIANGULUM)).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.TRIANGULUM.get(),1)
                 .requires(ModItems.INCOMPLETE_TRIANGULUM)
                 .requires(ModItems.INCOMPLETE_TRIANGULUM)
                 .requires(ModItems.INCOMPLETE_TRIANGULUM)

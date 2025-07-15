@@ -54,5 +54,6 @@
   "block.sillywilliescore.mossy_geostone_bricks_stairs": "Mossy Geostone Bricks Stairs",
   "block.sillywilliescore.mossy_geostone_bricks_wall": "Mossy Geostone Bricks Wall",
   "block.sillywilliescore.cracked_geostone_bricks": "Cracked Geostone Bricks",
-  "block.sillywilliescore.triangulum_bricks_pressure_plate": "Triangulum Bricks Pressure Plate"
+  "block.sillywilliescore.triangulum_bricks_pressure_plate": "Triangulum Bricks Pressure Plate",
+  "trim_material.sillywilliescore.triangulum" : "Triangulum Material"
 }

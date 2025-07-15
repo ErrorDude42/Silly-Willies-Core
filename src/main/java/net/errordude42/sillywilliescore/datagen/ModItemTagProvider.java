@@ -19,6 +19,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
         super(output, lookupProvider, blockTags, SillyWilliesCore.MOD_ID, existingFileHelper);
     }
 
+
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(ModTags.Items.ENTANGULUM_SMELTABLE)
@@ -46,5 +47,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.GEOSTONE_COBBLE.asItem());
         tag(ItemTags.STONE_CRAFTING_MATERIALS)
                 .add(ModBlocks.GEOSTONE_COBBLE.asItem());
+
+        this.tag(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.TRIANGULUM.get());
     }
 }

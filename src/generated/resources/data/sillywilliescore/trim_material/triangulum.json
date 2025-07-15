@@ -1,0 +1,9 @@
+{
+  "asset_name": "triangulum",
+  "description": {
+    "color": "#FBF236",
+    "translate": "trim_material.sillywilliescore.triangulum"
+  },
+  "ingredient": "sillywilliescore:triangulum",
+  "item_model_index": 0.5
+}
