@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_geostone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sillywilliescore:geostone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sillywilliescore:silt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_geostone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sillywilliescore:silt"
+    ]
+  }
+}

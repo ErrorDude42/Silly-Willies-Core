@@ -28,6 +28,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.TRIANGULUMRAW.get())
                 .add(ModBlocks.TRIANGULUMORE_DEEPSLATE.asItem());
 
+        tag(ModTags.Items.GEOSTONE_STONECUTTING).add(ModBlocks.GEOSTONE.asItem()).add(ModBlocks.GEOSTONE_BRICKS.asItem());
+
+        tag(ItemTags.STONE_CRAFTING_MATERIALS)
+                .add(ModBlocks.GEOSTONE_COBBLE.asItem());
+
         tag(ItemTags.SWORDS)
                 .add(ModItems.TRIANGULUM_SWORD.get());
         tag(ItemTags.PICKAXES)

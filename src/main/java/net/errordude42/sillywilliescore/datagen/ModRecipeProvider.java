@@ -7,13 +7,16 @@ import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.nbt.Tag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -29,6 +32,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes( RecipeOutput recipeOutput) {
     List<ItemLike> TRIANGULUM_SMELTABLES = List.of(ModItems.TRIANGULUMRAW, ModBlocks.TRIANGULUMORE_DEEPSLATE);
     List<ItemLike> ENTANGULUM_SMELTABLES = List.of(ModItems.RAW_ENTANGULUM, ModBlocks.ENTANGULUM_ORE);
+    List<ItemLike> GEOSTONE_STONECUTTING = List.of(ModBlocks.GEOSTONE,ModBlocks.GEOSTONE_BRICKS);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BLOCK_OF_RAW_TRIANGULUM.get())
                 .pattern("aaa")
@@ -49,6 +53,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("aa")
                 .define('a', ModItems.TRIANGULUMBRICK.get())
                 .unlockedBy("has_triangulum_brick",has(ModItems.TRIANGULUMBRICK)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GEOSTONE_BRICKS.get(),4)
+                .pattern("aa")
+                .pattern("aa")
+                .define('a', ModBlocks.GEOSTONE.get())
+                .unlockedBy("has_geostone",has(ModBlocks.GEOSTONE)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.SILT.get(),2)
+                .pattern("ab")
+                .pattern("ba")
+                .define('a', Blocks.DIRT)
+                .define('b', Items.CLAY_BALL)
+                .unlockedBy("has_geostone",has(ModBlocks.GEOSTONE)).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModItems.TRIANGULUMBRICK.get(), 8)
                 .pattern("aaa")
@@ -120,8 +137,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stairBuilder(ModBlocks.GEOSTONE_STAIRS.get(),Ingredient.of(ModBlocks.GEOSTONE))
                 .group("geostone")
                 .unlockedBy("has_geostone",has(ModBlocks.GEOSTONE)).save(recipeOutput);
+        stairBuilder(ModBlocks.GEOSTONE_BRICKS_STAIRS.get(),Ingredient.of(ModBlocks.GEOSTONE_BRICKS))
+                .group("geostone_bricks")
+                .unlockedBy("has_geostone_bricks",has(ModBlocks.GEOSTONE_BRICKS)).save(recipeOutput);
+        stairBuilder(ModBlocks.MOSSY_GEOSTONE_BRICKS_STAIRS.get(),Ingredient.of(ModBlocks.MOSSY_GEOSTONE_BRICKS))
+                .group("mossy_geostone_bricks")
+                .unlockedBy("has_mossy_geostone_bricks",has(ModBlocks.MOSSY_GEOSTONE_BRICKS)).save(recipeOutput);
         stairBuilder(ModBlocks.GEOSTONE_COBBLE_STAIRS.get(),Ingredient.of(ModBlocks.GEOSTONE_COBBLE))
-                .group("geostone")
+                .group("geostone_cobble")
                 .unlockedBy("has_geostone_cobble",has(ModBlocks.GEOSTONE_COBBLE)).save(recipeOutput);
             buttonBuilder(ModBlocks.TRIANGULUM_BRICKS_BUTTON.get(),Ingredient.of(ModBlocks.TRIANGULUM_BRICKS))
                 .group("triangulum_bricks")
@@ -132,10 +155,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
             slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.TRIANGULUM_BRICKS_SLAB.get(),ModBlocks.TRIANGULUM_BRICKS);
             slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_SLAB.get(),ModBlocks.GEOSTONE);
+            slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.SMOOTH_GEOSTONE_SLAB.get(),ModBlocks.SMOOTH_GEOSTONE);
+            slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_BRICKS_SLAB.get(),ModBlocks.GEOSTONE_BRICKS);
+            slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.MOSSY_GEOSTONE_BRICKS_SLAB.get(),ModBlocks.MOSSY_GEOSTONE_BRICKS);
             slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_COBBLE_SLAB.get(),ModBlocks.GEOSTONE_COBBLE);
 
             wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.TRIANGULUM_BRICKS_WALL.get(),ModBlocks.TRIANGULUM_BRICKS);
             wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_COBBLE_WALL.get(),ModBlocks.GEOSTONE_COBBLE);
+            wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_BRICKS_WALL.get(),ModBlocks.GEOSTONE_BRICKS);
+            wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL.get(),ModBlocks.MOSSY_GEOSTONE_BRICKS);
             pressurePlate(recipeOutput,ModBlocks.TRIANGULUM_BRICKS_PRESSURE_PLATE.get(),ModBlocks.TRIANGULUM_BRICKS);
             pressurePlate(recipeOutput,ModBlocks.GEOSTONE_PRESSURE_PLATE.get(),ModBlocks.GEOSTONE);
 
@@ -179,26 +207,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModItems.ENTANGULUM_DUST.get(),ModItems.DIRTY_ENTANGULUM_DUST.get());
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_STAIRS,ModBlocks.TRIANGULUM_BRICKS);
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_SLAB,ModBlocks.TRIANGULUM_BRICKS);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_SLAB,ModBlocks.TRIANGULUM_BRICKS,2);
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.TRIANGULUM_BRICKS_WALL,ModBlocks.TRIANGULUM_BRICKS);
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_SLAB,ModBlocks.GEOSTONE);
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_STAIRS,ModBlocks.GEOSTONE);
-        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_SLAB,ModBlocks.GEOSTONE_COBBLE);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_SLAB,ModBlocks.GEOSTONE,2);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.SMOOTH_GEOSTONE_SLAB,ModBlocks.SMOOTH_GEOSTONE,2);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_BRICKS,ModBlocks.GEOSTONE);
+        stonecuttermulti(recipeOutput,RecipeCategory.MISC, ModBlocks.CHISLED_GEOSTONE, ModTags.Items.GEOSTONE_STONECUTTING,1,ModBlocks.GEOSTONE.get());
+        stonecuttermulti(recipeOutput,RecipeCategory.MISC, ModBlocks.GEOSTONE_BRICKS_SLAB, ModTags.Items.GEOSTONE_STONECUTTING,2,ModBlocks.GEOSTONE.get());
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.MOSSY_GEOSTONE_BRICKS_SLAB,ModBlocks.MOSSY_GEOSTONE_BRICKS,2);
+        stonecuttermulti(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_BRICKS_STAIRS, ModTags.Items.GEOSTONE_STONECUTTING,1,ModBlocks.GEOSTONE.get());
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.MOSSY_GEOSTONE_BRICKS_STAIRS,ModBlocks.MOSSY_GEOSTONE_BRICKS);
+        stonecuttermulti(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_BRICKS_WALL, ModTags.Items.GEOSTONE_STONECUTTING,1,ModBlocks.GEOSTONE.get());
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL,ModBlocks.MOSSY_GEOSTONE_BRICKS);
+        stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_SLAB,ModBlocks.GEOSTONE_COBBLE,2);
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_STAIRS,ModBlocks.GEOSTONE_COBBLE);
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_WALL,ModBlocks.GEOSTONE_COBBLE);
 
 
 
     }
-    protected static void stonecutterResultFromBase(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, ItemLike material) {
-        stonecutterResultFromBase(recipeOutput, category, result, material, 1);
-    }
 
-    protected static void stonecutterResultFromBase(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, ItemLike material, int resultCount) {
+
+
+    protected static <T extends SingleItemRecipe> void stonecuttermulti(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, TagKey material, int resultCount, Block unlockBy) {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(material), category, result, resultCount)
-                .unlockedBy(getHasName(material), has(material))
+                .unlockedBy(getHasName(unlockBy), has(unlockBy))
                 .save(recipeOutput, SillyWilliesCore.MOD_ID + ":"+ getItemName(result) + "_stonecutting");
     }
+
 
     protected static void smithing( RecipeOutput recipeOutput, Item template, Item base, Item addition, RecipeCategory category, Item result, String recipeName) {
         smithingRecipe(recipeOutput, template, base, addition, category, result, recipeName);

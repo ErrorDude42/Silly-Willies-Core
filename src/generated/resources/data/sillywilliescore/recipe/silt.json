@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:dirt"
+    },
+    "b": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "pattern": [
+    "ab",
+    "ba"
+  ],
+  "result": {
+    "count": 2,
+    "id": "sillywilliescore:silt"
+  }
+}

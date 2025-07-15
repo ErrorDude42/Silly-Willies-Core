@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_geostone_cobble": {
+    "has_geostone": {
       "conditions": {
         "items": [
           {
-            "items": "sillywilliescore:geostone_cobble"
+            "items": "sillywilliescore:geostone"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "sillywilliescore:geostone_cobble_wall_stonecutting"
+        "recipe": "minecraft:geostone_slab_from_geostone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_geostone_cobble"
+      "has_geostone"
     ]
   ],
   "rewards": {
     "recipes": [
-      "sillywilliescore:geostone_cobble_wall_stonecutting"
+      "minecraft:geostone_slab_from_geostone_stonecutting"
     ]
   }
 }

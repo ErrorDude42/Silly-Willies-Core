@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "sillywilliescore:triangulum_bricks_wall_stonecutting"
+        "recipe": "minecraft:triangulum_bricks_wall_from_triangulum_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "sillywilliescore:triangulum_bricks_wall_stonecutting"
+      "minecraft:triangulum_bricks_wall_from_triangulum_bricks_stonecutting"
     ]
   }
 }
