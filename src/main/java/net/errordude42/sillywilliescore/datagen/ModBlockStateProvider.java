@@ -2,6 +2,7 @@ package net.errordude42.sillywilliescore.datagen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -73,7 +74,30 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.GEOSTONE_PRESSURE_PLATE);
         blockItem(ModBlocks.TRIANGULUM_BRICKS_PRESSURE_PLATE);
 
+        logBlock(((RotatedPillarBlock) ModBlocks.WONDER_OAK_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.WONDER_OAK_WOOD.get()), blockTexture(ModBlocks.WONDER_OAK_LOG.get()), blockTexture(ModBlocks.WONDER_OAK_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_WONDER_OAK_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_WONDER_OAK_WOOD.get()), blockTexture(ModBlocks.STRIPPED_WONDER_OAK_LOG.get()), blockTexture(ModBlocks.STRIPPED_WONDER_OAK_LOG.get()));
 
+        blockItem(ModBlocks.WONDER_OAK_LOG);
+        blockItem(ModBlocks.WONDER_OAK_WOOD);
+        blockItem(ModBlocks.STRIPPED_WONDER_OAK_LOG);
+        blockItem(ModBlocks.STRIPPED_WONDER_OAK_WOOD);
+
+        blockWithItem(ModBlocks.WONDER_OAK_PLANKS);
+
+        leavesBlock(ModBlocks.WONDER_OAK_LEAVES);
+        saplingBlock(ModBlocks.WONDER_OAK_SAPLING);
+    }
+    private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(DeferredBlock<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     private void smoothDifferentTexture(DeferredBlock<?> deferredBlock,String name,String textureName) {

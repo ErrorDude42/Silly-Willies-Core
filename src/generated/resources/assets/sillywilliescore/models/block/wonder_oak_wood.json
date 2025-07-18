@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "sillywilliescore:block/wonder_oak_log",
+    "side": "sillywilliescore:block/wonder_oak_log"
+  }
+}

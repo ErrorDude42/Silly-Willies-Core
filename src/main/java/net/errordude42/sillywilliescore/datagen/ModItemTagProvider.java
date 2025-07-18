@@ -7,6 +7,7 @@ import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -50,5 +51,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         this.tag(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.TRIANGULUM.get());
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.WONDER_OAK_LOG.get().asItem())
+                .add(ModBlocks.WONDER_OAK_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_WONDER_OAK_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_WONDER_OAK_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.WONDER_OAK_PLANKS.asItem());
     }
 }

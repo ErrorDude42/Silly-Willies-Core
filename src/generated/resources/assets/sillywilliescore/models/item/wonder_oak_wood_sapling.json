@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sillywilliescore:block/wonder_oak_wood_sapling"
+  }
+}

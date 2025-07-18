@@ -1,5 +1,6 @@
-// 1.21.1	2025-07-18T00:00:33.2635901	Registries
+// 1.21.1	2025-07-18T16:06:57.6641614	Registries
 011ad9d84a191727a9f96c0beac602d24c8ef741 data/sillywilliescore/neoforge/biome_modifier/add_triangulum_ore.json
 993783171b223096d0d62696f50c79c305889181 data/sillywilliescore/trim_material/triangulum.json
 c674a9bbab88a9e3135c2f3bd0ef91447499e692 data/sillywilliescore/worldgen/configured_feature/triangulum_ore.json
+766eaadb056e260c0be319d73f0b7bf3e8f20b87 data/sillywilliescore/worldgen/configured_feature/wonder_oak.json
 f2ee00b8aa1526840c084e2f75b4023f1694a937 data/sillywilliescore/worldgen/placed_feature/triangulum_ore_placed.json

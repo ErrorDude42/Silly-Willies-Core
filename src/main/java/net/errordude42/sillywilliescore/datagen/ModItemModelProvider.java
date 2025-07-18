@@ -120,7 +120,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.GEOSTONE_BRICKS_WALL,ModBlocks.GEOSTONE_BRICKS);
         wallItem(ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL,ModBlocks.MOSSY_GEOSTONE_BRICKS);
 
+        saplingItem(ModBlocks.WONDER_OAK_SAPLING);
+    }
 
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(SillyWilliesCore.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {

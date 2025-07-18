@@ -95,6 +95,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.GEOSTONE_COBBLE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GEOSTONE_COBBLE_SLAB.get())
         );
+
+        this.dropSelf(ModBlocks.WONDER_OAK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_WONDER_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_WONDER_OAK_LOG.get());
+        this.dropSelf(ModBlocks.WONDER_OAK_WOOD.get());
+        this.dropSelf(ModBlocks.WONDER_OAK_PLANKS.get());
+        this.dropSelf(ModBlocks.WONDER_OAK_SAPLING.get());
+
+        this.add(ModBlocks.WONDER_OAK_LEAVES.get(), block ->
+                createLeavesDrops(block,ModBlocks.WONDER_OAK_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES)
+                );
     }
 
     protected LootTable.Builder createCobbleDrops(Block pBlock, Block Block2) {

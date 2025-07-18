@@ -1,12 +1,18 @@
 package net.errordude42.sillywilliescore.block;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
+import net.errordude42.sillywilliescore.block.custom.ModFlammableRotatedPillarBlock;
 import net.errordude42.sillywilliescore.item.ModItems;
+import net.errordude42.sillywilliescore.worldgen.tree.ModTreeGrowers;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
@@ -222,6 +228,56 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().strength(3f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
                     requiresCorrectToolForDrops()
             ));
+
+    public static final DeferredBlock<Block> WONDER_OAK_LOG = registerBlock("wonder_oak_log",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final DeferredBlock<Block> WONDER_OAK_WOOD = registerBlock("wonder_oak_wood",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+    public static final DeferredBlock<Block> STRIPPED_WONDER_OAK_LOG = registerBlock("stripped_wonder_oak_log",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final DeferredBlock<Block> STRIPPED_WONDER_OAK_WOOD = registerBlock("stripped_wonder_oak_wood",
+            ()-> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final DeferredBlock<Block> WONDER_OAK_PLANKS = registerBlock("wonder_oak_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            }
+            );
+
+    public static final DeferredBlock<Block> WONDER_OAK_LEAVES = registerBlock("wonder_oak_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            }
+    );
+
+    public static final DeferredBlock<Block> WONDER_OAK_SAPLING = registerBlock("wonder_oak_wood_sapling",
+            ()-> new SaplingBlock(ModTreeGrowers.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

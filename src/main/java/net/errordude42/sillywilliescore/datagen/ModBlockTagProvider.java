@@ -66,6 +66,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .remove(ModTags.Blocks.NEEDS_TRIANGULUM_TOOL);
 
-
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.WONDER_OAK_LOG.get())
+                .add(ModBlocks.WONDER_OAK_WOOD.get())
+                .add(ModBlocks.STRIPPED_WONDER_OAK_LOG.get())
+                .add(ModBlocks.STRIPPED_WONDER_OAK_WOOD.get());
     }
 }

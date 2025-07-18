@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "sillywilliescore:block/stripped_wonder_oak_log_top",
+    "side": "sillywilliescore:block/stripped_wonder_oak_log"
+  }
+}

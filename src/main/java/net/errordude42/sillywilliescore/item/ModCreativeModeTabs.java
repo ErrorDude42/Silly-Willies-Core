@@ -67,7 +67,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.GEOSTONE_COBBLE_STAIRS);
                         output.accept(ModBlocks.GEOSTONE_COBBLE_SLAB);
                         output.accept(ModBlocks.GEOSTONE_COBBLE_WALL);
-                        output.accept(ModBlocks.SILT);
                         output.accept(ModBlocks.CHISLED_GEOSTONE);
                         output.accept(ModBlocks.CRACKED_GEOSTONE_BRICKS);
                         output.accept(ModBlocks.GEOSTONE_BRICKS);
@@ -81,6 +80,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SMOOTH_GEOSTONE);
                         output.accept(ModBlocks.SMOOTH_GEOSTONE_SLAB);
 
+
+                    })
+                    .build()
+    );
+
+    public static final Supplier<CreativeModeTab> SILLY_WILLY_NATURE_BLOCKS = CREATIVE_MODE_TAB.register("silly_willy_core_nature_blocks",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.WONDER_OAK_SAPLING.get()))
+                    .title(Component.translatable("creativetab.sillywilliescore.sillywilliescore_nature_blocks"))
+                    .displayItems((itemDisplayParameters, output)-> {
+                        output.accept(ModBlocks.SILT);
+                        output.accept(ModBlocks.WONDER_OAK_LOG);
+                        output.accept(ModBlocks.WONDER_OAK_WOOD);
+                        output.accept(ModBlocks.STRIPPED_WONDER_OAK_LOG);
+                        output.accept(ModBlocks.STRIPPED_WONDER_OAK_WOOD);
+                        output.accept(ModBlocks.WONDER_OAK_LEAVES);
+                        output.accept(ModBlocks.WONDER_OAK_PLANKS);
+                        output.accept(ModBlocks.WONDER_OAK_SAPLING);
 
                     })
                     .build()
