@@ -54,6 +54,9 @@ public class ModItems {
     public static final DeferredItem<Item> ENTANGULUM_MASTERWORK_SMITHING_TEMPLATE = ITEMS.register("entangulum_masterwork_smithing_template",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> ENTANGULUM_DUSTED_MOLD = ITEMS.register("entangulum_dusted_mold",
+            () -> new Item(new Item.Properties().craftRemainder(ModItems.PLATE_MOLD.get())));
+
     public static final DeferredItem<SwordItem> TRIANGULUM_SWORD =ITEMS.register("triangulum_sword",
             () -> new SwordItem(ModToolTiers.TRIANGULUM, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.TRIANGULUM,5,-2.6f))
@@ -70,7 +73,7 @@ public class ModItems {
     public static final DeferredItem<HoeItem> TRIANGULUM_HOE = ITEMS.register("triangulum_hoe",
             () -> new HoeItem(ModToolTiers.TRIANGULUM, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.TRIANGULUM, -5F, 0f))));
-    //public static final DeferredItem<MaceItem>
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

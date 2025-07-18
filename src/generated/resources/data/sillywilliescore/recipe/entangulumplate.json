@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "sillywilliescore:entangulum_dusted_mold"
+    },
+    {
+      "item": "sillywilliescore:triangulum"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:entangulumplate"
+  }
+}

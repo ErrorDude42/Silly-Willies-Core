@@ -104,6 +104,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ENTANGULUM_STRING.get());
         basicItem(ModItems.EMPTY_SPOOL.get());
         basicItem(ModItems.ENTANGULUM_PLATE.get());
+        basicItem(ModItems.ENTANGULUM_DUSTED_MOLD.get());
 
         handheldItem(ModItems.TRIANGULUM_SWORD);
         handheldItem(ModItems.TRIANGULUM_SHOVEL);

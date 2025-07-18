@@ -43,6 +43,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BLOCK_OF_RAW_ENTANGULUM);
                         output.accept(ModItems.PLATE_MOLD);
                         output.accept(ModItems.EMPTY_SPOOL);
+                        output.accept(ModItems.ENTANGULUM_DUSTED_MOLD);
                     })
                     .build()
             );
