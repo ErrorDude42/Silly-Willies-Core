@@ -1,18 +1,39 @@
 package net.errordude42.sillywilliescore.worldgen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
+import net.errordude42.sillywilliescore.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+
+import java.util.List;
 
 public class ModConfiguredFeatures {
 
+    public static final ResourceKey<ConfiguredFeature<?,?>> OVERWORLD_TRIANGULUM_ORE_KEY = registerKey("triangulum_ore");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?,?>>context){
 
+        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
+        RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
+
+        List<OreConfiguration.TargetBlockState> overworldTriangulumOres = List.of(
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.TRIANGULUMORE_DEEPSLATE.get().defaultBlockState())
+        );
+
+        register(context, OVERWORLD_TRIANGULUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTriangulumOres,9));
     }
 
     public  static ResourceKey<ConfiguredFeature<?,?>> registerKey(String name){
