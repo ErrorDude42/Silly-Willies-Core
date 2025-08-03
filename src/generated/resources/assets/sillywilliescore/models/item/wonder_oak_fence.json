@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "sillywilliescore:block/wonder_oak_planks"
+  }
+}

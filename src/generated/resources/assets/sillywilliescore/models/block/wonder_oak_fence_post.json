@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "sillywilliescore:block/wonder_oak_planks"
+  }
+}

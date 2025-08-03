@@ -1,8 +1,9 @@
 package net.errordude42.sillywilliescore.block;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
-import net.errordude42.sillywilliescore.block.custom.ModFlammableRotatedPillarBlock;
+import net.errordude42.sillywilliescore.block.custom.*;
 import net.errordude42.sillywilliescore.item.ModItems;
+import net.errordude42.sillywilliescore.util.ModWoodTypes;
 import net.errordude42.sillywilliescore.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -14,14 +15,14 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
-
+@SuppressWarnings("NullableProblems")
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(SillyWilliesCore.MOD_ID);
@@ -241,6 +242,54 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WONDER_OAK_PLANKS = registerBlock("wonder_oak_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)){
                 @Override
+                public boolean isFlammable( BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            }
+    );
+
+    public static final DeferredBlock<Block> WONDER_OAK_SIGN = registerBlock("wonder_oak_sign",
+            () -> new ModStandingSignBlock(ModWoodTypes.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN)));
+    public static final DeferredBlock<Block> WONDER_OAK_WALL_SIGN = registerBlock("wonder_oak_wall_sign",
+            () -> new ModWallSignBlock(ModWoodTypes.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN).lootFrom(WONDER_OAK_SIGN)));
+
+    public static final DeferredBlock<Block> WONDER_OAK_HANGING_SIGN = registerBlock("wonder_oak_hanging_sign",
+            () -> new ModHangingSignBlock(ModWoodTypes.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN)));
+    public static final DeferredBlock<Block> WONDER_OAK_WALL_HANGING_SIGN = registerBlock("wonder_oak_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(ModWoodTypes.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN)));
+
+    public static final DeferredBlock<TrapDoorBlock> WONDER_OAK_TRAPDOOR = registerBlock("wonder_oak_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            }
+    );
+
+    public static final DeferredBlock<DoorBlock> WONDER_OAK_DOOR = registerBlock("wonder_oak_door",
+            () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)){
+                @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
                 }
@@ -256,6 +305,124 @@ public class ModBlocks {
                 }
             }
             );
+
+    public static final DeferredBlock<FenceGateBlock> WONDER_OAK_FENCE_GATE = registerBlock("wonder_oak_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            }
+    );
+
+    public static final DeferredBlock<FenceBlock> WONDER_OAK_FENCE = registerBlock("wonder_oak_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            }
+            );
+
+    public static final DeferredBlock<ButtonBlock> WONDER_OAK_BUTTON = registerBlock("wonder_oak_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 20, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            }
+            );
+
+    public static final DeferredBlock<PressurePlateBlock> WONDER_OAK_PRESSURE_PLATE = registerBlock("wonder_oak_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            }
+    );
+
+
+
+    public static final DeferredBlock<SlabBlock> WONDER_OAK_SLAB = registerBlock("wonder_oak_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            }
+    );
+
+    public static final DeferredBlock<StairBlock> WONDER_OAK_STAIRS = registerBlock("wonder_oak_stairs",
+            () -> new StairBlock(ModBlocks.WONDER_OAK_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            }
+    );
+
+
 
     public static final DeferredBlock<Block> WONDER_OAK_LEAVES = registerBlock("wonder_oak_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)){
@@ -278,6 +445,8 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> WONDER_OAK_SAPLING = registerBlock("wonder_oak_wood_sapling",
             ()-> new SaplingBlock(ModTreeGrowers.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

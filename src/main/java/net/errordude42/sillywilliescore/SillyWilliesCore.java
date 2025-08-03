@@ -3,8 +3,14 @@ package net.errordude42.sillywilliescore;
 import net.errordude42.sillywilliescore.block.ModBlocks;
 import net.errordude42.sillywilliescore.item.ModCreativeModeTabs;
 import net.errordude42.sillywilliescore.item.ModItems;
+import net.errordude42.sillywilliescore.loot.ModLootModifiers;
+import net.errordude42.sillywilliescore.util.ModWoodTypes;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -20,6 +26,7 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
+@SuppressWarnings("removal")
 @Mod(SillyWilliesCore.MOD_ID)
 public class SillyWilliesCore {
     // Define mod id in a common place for everything to reference
@@ -37,6 +44,8 @@ public class SillyWilliesCore {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModLootModifiers.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
 
@@ -66,5 +75,15 @@ public class SillyWilliesCore {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
+    }
+
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.WONDER_OAK);
+
+
+        }
     }
 }

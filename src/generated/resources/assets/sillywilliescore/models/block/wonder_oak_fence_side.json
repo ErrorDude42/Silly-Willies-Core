@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "sillywilliescore:block/wonder_oak_planks"
+  }
+}

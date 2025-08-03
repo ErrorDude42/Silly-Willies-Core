@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sillywilliescore:block/wonder_oak_slab"
+    },
+    "type=double": {
+      "model": "sillywilliescore:block/wonder_oak_planks"
+    },
+    "type=top": {
+      "model": "sillywilliescore:block/wonder_oak_slab_top"
+    }
+  }
+}

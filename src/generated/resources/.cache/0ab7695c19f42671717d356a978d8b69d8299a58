@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-18T16:08:29.2137574	Item Models: sillywilliescore
+// 1.21.1	2025-08-03T09:21:16.092498	Item Models: sillywilliescore
 daea4aca75fd6bb8adcf8ff61216e49bfad55429 assets/sillywilliescore/models/item/dirtyentangulumdust.json
 77c0ffe09d009073ab130d44ed36e6a7e9d667b0 assets/sillywilliescore/models/item/empty_spool.json
 9fb0232f8c6e615faa49cb5d7178092afd3188ce assets/sillywilliescore/models/item/entangulumdust.json
@@ -25,4 +25,9 @@ a9bf57007aaef77fca358edd1f37938fbdb2ee8e assets/sillywilliescore/models/item/tri
 58d309646083ae42cd422de4ae7fa2d99c59d7ad assets/sillywilliescore/models/item/triangulum_pickaxe.json
 68ad4041d986b82cf126b48ea3c3f13ff193df40 assets/sillywilliescore/models/item/triangulum_shovel.json
 669b35f8fc25cf03057169f581840aa9528bce1e assets/sillywilliescore/models/item/triangulum_sword.json
+ea77c592c8580f6f6ff8b1da35d61244c122c9f8 assets/sillywilliescore/models/item/wonder_oak_button.json
+7f4aa30c0765ad4b3d7e29e1c29373434526b5d9 assets/sillywilliescore/models/item/wonder_oak_door.json
+241bb46a58d09768dcdad629e9bb631a72bd2038 assets/sillywilliescore/models/item/wonder_oak_fence.json
+b79b2370ef91500bb68b1f48e736015fd944983f assets/sillywilliescore/models/item/wonder_oak_hanging_sign.json
+9695d3c0e6a7fbe972f7be968d1521743c0f3fc8 assets/sillywilliescore/models/item/wonder_oak_sign.json
 5b0997361dc30712d5f738ba0a4c35891657d85f assets/sillywilliescore/models/item/wonder_oak_wood_sapling.json

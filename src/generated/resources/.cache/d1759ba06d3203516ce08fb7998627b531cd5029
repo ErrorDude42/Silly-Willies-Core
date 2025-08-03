@@ -1,0 +1,4 @@
+// 1.21.1	2025-07-29T21:51:33.968328	Global Loot Modifiers : sillywilliescore
+2ccd08be27c54e4361ef515ebdc234bb8ef63ac3 data/neoforge/loot_modifiers/global_loot_modifiers.json
+60c3df585b004872f29614d9830f0af26ab11644 data/sillywilliescore/loot_modifiers/tri_up_temp_to_end_city_chest.json
+cb9dd660eab9b9ab04c7549298756938b1f90e75 data/sillywilliescore/loot_modifiers/wonder_sap_to_end_city_chest.json

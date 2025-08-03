@@ -106,6 +106,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ENTANGULUM_PLATE.get());
         basicItem(ModItems.ENTANGULUM_DUSTED_MOLD.get());
 
+        basicItem(ModBlocks.WONDER_OAK_DOOR.asItem());
+
         handheldItem(ModItems.TRIANGULUM_SWORD);
         handheldItem(ModItems.TRIANGULUM_SHOVEL);
         handheldItem(ModItems.TRIANGULUM_AXE);
@@ -114,6 +116,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         buttonItem(ModBlocks.TRIANGULUM_BRICKS_BUTTON,ModBlocks.TRIANGULUM_BRICKS);
         buttonItem(ModBlocks.GEOSTONE_BUTTON,ModBlocks.GEOSTONE);
+        buttonItem(ModBlocks.WONDER_OAK_BUTTON,ModBlocks.WONDER_OAK_PLANKS);
+
+        fenceItem(ModBlocks.WONDER_OAK_FENCE,ModBlocks.WONDER_OAK_PLANKS);
 
         wallItem(ModBlocks.TRIANGULUM_BRICKS_WALL,ModBlocks.TRIANGULUM_BRICKS);
         wallItem(ModBlocks.GEOSTONE_COBBLE_WALL,ModBlocks.GEOSTONE_COBBLE);
@@ -121,12 +126,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL,ModBlocks.MOSSY_GEOSTONE_BRICKS);
 
         saplingItem(ModBlocks.WONDER_OAK_SAPLING);
+
+        differentItemTexture(ModBlocks.WONDER_OAK_SIGN);
+        differentItemTexture(ModBlocks.WONDER_OAK_HANGING_SIGN);
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(SillyWilliesCore.MOD_ID,"block/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder differentItemTexture (DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(SillyWilliesCore.MOD_ID,"item/" + item.getId().getPath()+"_item"));
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {

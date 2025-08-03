@@ -3,15 +3,10 @@ package net.errordude42.sillywilliescore.datagen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.block.ModBlocks;
-import net.errordude42.sillywilliescore.item.ModItems;
 import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -52,6 +47,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ENTANGULUM_ORE.get())
                 .add(ModBlocks.TRIANGULUMORE_DEEPSLATE.get());
 
+
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.WONDER_OAK_FENCE_GATE.get());
+
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.WONDER_OAK_FENCE.get());
+
+        tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.WONDER_OAK_FENCE.get());
 
         tag(BlockTags.WALLS)
                 .add(ModBlocks.TRIANGULUM_BRICKS_WALL.get())

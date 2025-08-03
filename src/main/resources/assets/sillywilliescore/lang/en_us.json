@@ -22,6 +22,7 @@
 
   "creativetab.sillywilliescore.sillywilliescore_items" : "Silly Willies Core",
   "creativetab.sillywilliescore.sillywilliescore_building_blocks" : "Silly Willies Building Blocks",
+  "creativetab.sillywilliescore.sillywilliescore_nature_blocks" : "Silly Willies Nature Blocks",
 
   "block.sillywilliescore.silt": "Silt",
   "block.sillywilliescore.entangulumore": "Entangulum Ore",
@@ -56,5 +57,14 @@
   "block.sillywilliescore.mossy_geostone_bricks_wall": "Mossy Geostone Bricks Wall",
   "block.sillywilliescore.cracked_geostone_bricks": "Cracked Geostone Bricks",
   "block.sillywilliescore.triangulum_bricks_pressure_plate": "Triangulum Bricks Pressure Plate",
+  "block.sillywilliescore.wonder_oak_log": "Wonder Oak Log",
+  "block.sillywilliescore.stripped_wonder_oak_log": "Stripped Wonder Oak Log",
+  "block.sillywilliescore.wonder_oak_wood": "Wonder Oak Wood",
+  "block.sillywilliescore.stripped_wonder_oak_wood": "Stripped Wonder Oak Wood",
+  "block.sillywilliescore.wonder_oak_leaves": "Wonder Oak Leaves",
+  "block.sillywilliescore.wonder_oak_wood_sapling": "Wonder Oak Sapling",
+  "block.sillywilliescore.wonder_oak_planks": "Wonder Oak Planks",
+
   "trim_material.sillywilliescore.triangulum" : "Triangulum Material"
+
 }

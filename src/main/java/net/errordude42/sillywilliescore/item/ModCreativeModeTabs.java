@@ -79,7 +79,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL);
                         output.accept(ModBlocks.SMOOTH_GEOSTONE);
                         output.accept(ModBlocks.SMOOTH_GEOSTONE_SLAB);
-
+                        output.accept(ModBlocks.WONDER_OAK_PLANKS);
+                        output.accept(ModBlocks.WONDER_OAK_SLAB);
+                        output.accept(ModBlocks.WONDER_OAK_STAIRS);
+                        output.accept(ModBlocks.WONDER_OAK_FENCE);
+                        output.accept(ModBlocks.WONDER_OAK_DOOR);
+                        output.accept(ModBlocks.WONDER_OAK_TRAPDOOR);
+                        output.accept(ModBlocks.WONDER_OAK_FENCE_GATE);
+                        output.accept(ModBlocks.WONDER_OAK_PRESSURE_PLATE);
+                        output.accept(ModBlocks.WONDER_OAK_BUTTON);
+                        output.accept(ModBlocks.WONDER_OAK_SIGN);
+                        output.accept(ModBlocks.WONDER_OAK_HANGING_SIGN);
 
                     })
                     .build()

@@ -2,38 +2,17 @@ package net.errordude42.sillywilliescore.datagen;
 
 import net.errordude42.sillywilliescore.block.ModBlocks;
 import net.errordude42.sillywilliescore.item.ModItems;
-import net.minecraft.advancements.critereon.EnchantmentPredicate;
-import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.nbt.Tag;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.MossBlock;
-import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
-import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
-import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
-import net.minecraft.world.level.storage.loot.predicates.MatchTool;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.common.conditions.TrueCondition;
-
 
 import java.util.Set;
-import java.util.function.BiConsumer;
-import java.util.function.Function;
-import java.util.function.BiFunction;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected ModBlockLootTableProvider(HolderLookup.Provider registries){
@@ -64,6 +43,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
      dropSelf(ModBlocks.MOSSY_GEOSTONE_BRICKS.get());
      dropSelf(ModBlocks.MOSSY_GEOSTONE_BRICKS_STAIRS.get());
      dropSelf(ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL.get());
+     dropSelf(ModBlocks.WONDER_OAK_STAIRS.get());
+     dropSelf(ModBlocks.WONDER_OAK_FENCE.get());
+     dropSelf(ModBlocks.WONDER_OAK_FENCE_GATE.get());
+     dropSelf(ModBlocks.WONDER_OAK_TRAPDOOR.get());
+     dropSelf(ModBlocks.WONDER_OAK_PRESSURE_PLATE.get());
+     dropSelf(ModBlocks.WONDER_OAK_BUTTON.get());
+     dropSelf(ModBlocks.WONDER_OAK_SIGN.get());
+     dropSelf(ModBlocks.WONDER_OAK_HANGING_SIGN.get());
+
+     dropOther(ModBlocks.WONDER_OAK_WALL_SIGN.get(),ModBlocks.WONDER_OAK_SIGN.get());
+     dropOther(ModBlocks.WONDER_OAK_WALL_HANGING_SIGN.get(),ModBlocks.WONDER_OAK_HANGING_SIGN.get());
 
 
      add(ModBlocks.GEOSTONE.get(),
@@ -96,6 +86,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.GEOSTONE_COBBLE_SLAB.get())
         );
 
+        add(ModBlocks.WONDER_OAK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WONDER_OAK_SLAB.get())
+        );
+
+
         this.dropSelf(ModBlocks.WONDER_OAK_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_WONDER_OAK_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_WONDER_OAK_LOG.get());
@@ -106,6 +101,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.WONDER_OAK_LEAVES.get(), block ->
                 createLeavesDrops(block,ModBlocks.WONDER_OAK_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES)
                 );
+
+        add(ModBlocks.WONDER_OAK_DOOR.get(),
+                block -> createDoorTable(ModBlocks.WONDER_OAK_DOOR.get()));
     }
 
     protected LootTable.Builder createCobbleDrops(Block pBlock, Block Block2) {
