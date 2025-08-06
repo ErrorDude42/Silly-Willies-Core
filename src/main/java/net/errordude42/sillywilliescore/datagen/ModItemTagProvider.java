@@ -1,7 +1,7 @@
 package net.errordude42.sillywilliescore.datagen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
-import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.errordude42.sillywilliescore.item.ModItems;
 import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -59,5 +59,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.WONDER_OAK_PLANKS.asItem());
+
+        tag(ModTags.Items.WONDER_OAK_LOG_OR_WOOD)
+                .add(ModBlocks.WONDER_OAK_LOG.get().asItem())
+                .add(ModBlocks.WONDER_OAK_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_WONDER_OAK_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_WONDER_OAK_WOOD.get().asItem());
     }
 }

@@ -1,10 +1,26 @@
-// 1.21.1	2025-08-02T14:47:19.2539936	Tags for minecraft:block mod id sillywilliescore
+// 1.21.1	2025-08-05T21:18:17.8406256	Tags for minecraft:block mod id sillywilliescore
+c07d566bbe55eca4abd3d17f243f9da771a4b947 data/minecraft/tags/block/buttons.json
+11c7fc60f3d97f5934197f9aaac7bbb3c0156afa data/minecraft/tags/block/doors.json
 d0d4cee331fea897512be71e31b0ed0d2b3a43b7 data/minecraft/tags/block/fences.json
 da020ff5fc8699ce98b28094710e11a3d3aab05f data/minecraft/tags/block/fence_gates.json
 e5bc5ca3c50f7b07b867a8b5165e736231e3d9c3 data/minecraft/tags/block/logs_that_burn.json
+89884a1216be81b0ea04a946dd97152bd8288edb data/minecraft/tags/block/mineable/axe.json
 74e3a8d3d1e39f5a4af7d039ef50377e72d37008 data/minecraft/tags/block/mineable/pickaxe.json
+11c7fc60f3d97f5934197f9aaac7bbb3c0156afa data/minecraft/tags/block/mob_interactable_doors.json
 c7cb22a74d860ac46d1bb16ac6f902ac5d1b6c85 data/minecraft/tags/block/needs_diamond_tool.json
+fd3556dacbd2125dbf217da57491951dc39fd67c data/minecraft/tags/block/planks.json
+e34e3d9e9b405fc50d3f6ad261e91b8ac900e2a1 data/minecraft/tags/block/pressure_plates.json
+b7cbf8c722df687aa74f9b0b6f212274dc2c6f45 data/minecraft/tags/block/slabs.json
+61f05ded55eb43dd8f6b8c04b65ff0a47a9ba73f data/minecraft/tags/block/stairs.json
+f1facba8515372eeb952bccb4eb686cae8151ba1 data/minecraft/tags/block/trapdoors.json
 fcea7bccce82a9debc90ef90ae2d4d9c05480ed3 data/minecraft/tags/block/walls.json
+e34e3d9e9b405fc50d3f6ad261e91b8ac900e2a1 data/minecraft/tags/block/wall_post_override.json
+c07d566bbe55eca4abd3d17f243f9da771a4b947 data/minecraft/tags/block/wooden_buttons.json
+11c7fc60f3d97f5934197f9aaac7bbb3c0156afa data/minecraft/tags/block/wooden_doors.json
 d0d4cee331fea897512be71e31b0ed0d2b3a43b7 data/minecraft/tags/block/wooden_fences.json
+e34e3d9e9b405fc50d3f6ad261e91b8ac900e2a1 data/minecraft/tags/block/wooden_pressure_plates.json
+ea4135839930a22678788132d0b50cbe725dc72e data/minecraft/tags/block/wooden_slabs.json
+faa2ef541be046449f754613a595bc79b5f5dbcd data/minecraft/tags/block/wooden_stairs.json
+f1facba8515372eeb952bccb4eb686cae8151ba1 data/minecraft/tags/block/wooden_trapdoors.json
 ecf2933c70db3b4c09825a1883d885d95760309b data/sillywilliescore/tags/block/incorrect_for_triangulum_tool.json
 a249c46329a41538f49a564e1f14338aaf1be5a0 data/sillywilliescore/tags/block/needs_triangulum_tool.json

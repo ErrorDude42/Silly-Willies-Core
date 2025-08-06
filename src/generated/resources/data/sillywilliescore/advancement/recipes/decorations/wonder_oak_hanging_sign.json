@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_wonder_oak": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sillywilliescore:stripped_wonder_oak_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sillywilliescore:wonder_oak_hanging_sign"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_wonder_oak"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sillywilliescore:wonder_oak_hanging_sign"
+    ]
+  }
+}

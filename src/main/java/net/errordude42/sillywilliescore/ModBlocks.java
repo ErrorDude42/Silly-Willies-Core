@@ -1,7 +1,10 @@
-package net.errordude42.sillywilliescore.block;
+package net.errordude42.sillywilliescore;
 
-import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.block.custom.*;
+import net.errordude42.sillywilliescore.block.sign.ModHangingSignBlock;
+import net.errordude42.sillywilliescore.block.sign.ModStandingSignBlock;
+import net.errordude42.sillywilliescore.block.sign.ModWallHangingSignBlock;
+import net.errordude42.sillywilliescore.block.sign.ModWallSignBlock;
 import net.errordude42.sillywilliescore.item.ModItems;
 import net.errordude42.sillywilliescore.util.ModWoodTypes;
 import net.errordude42.sillywilliescore.worldgen.tree.ModTreeGrowers;
@@ -258,15 +261,23 @@ public class ModBlocks {
             }
     );
 
-    public static final DeferredBlock<Block> WONDER_OAK_SIGN = registerBlock("wonder_oak_sign",
-            () -> new ModStandingSignBlock(ModWoodTypes.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN)));
-    public static final DeferredBlock<Block> WONDER_OAK_WALL_SIGN = registerBlock("wonder_oak_wall_sign",
-            () -> new ModWallSignBlock(ModWoodTypes.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN).lootFrom(WONDER_OAK_SIGN)));
+        public static final DeferredBlock<Block> WONDER_OAK_SIGN = registerBlockNoItem("wonder_oak_sign",
+                () -> new ModStandingSignBlock(ModWoodTypes.WONDER_OAK,
+                        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN)));
 
-    public static final DeferredBlock<Block> WONDER_OAK_HANGING_SIGN = registerBlock("wonder_oak_hanging_sign",
-            () -> new ModHangingSignBlock(ModWoodTypes.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN)));
-    public static final DeferredBlock<Block> WONDER_OAK_WALL_HANGING_SIGN = registerBlock("wonder_oak_wall_hanging_sign",
-            () -> new ModWallHangingSignBlock(ModWoodTypes.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN)));
+        public static final DeferredBlock<Block> WONDER_OAK_WALL_SIGN = registerBlockNoItem("wonder_oak_wall_sign",
+                () -> new ModWallSignBlock(ModWoodTypes.WONDER_OAK,
+                        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN)));
+
+
+        public static final DeferredBlock<Block> WONDER_OAK_HANGING_SIGN = registerBlockNoItem("wonder_oak_hanging_sign",
+                () -> new ModHangingSignBlock(ModWoodTypes.WONDER_OAK,
+                        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN)));
+
+        public static final DeferredBlock<Block> WONDER_OAK_WALL_HANGING_SIGN = registerBlockNoItem("wonder_oak_wall_hanging_sign",
+                () -> new ModWallHangingSignBlock(ModWoodTypes.WONDER_OAK,
+                        BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN)));
+
 
     public static final DeferredBlock<TrapDoorBlock> WONDER_OAK_TRAPDOOR = registerBlock("wonder_oak_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)){
@@ -458,6 +469,10 @@ public class ModBlocks {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
+    private static <T extends Block> DeferredBlock<T> registerBlockNoItem(String name, Supplier<T> block)
+    {
+        return BLOCKS.register(name, block);
+    }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

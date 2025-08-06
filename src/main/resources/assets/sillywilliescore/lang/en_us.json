@@ -19,6 +19,8 @@
   "item.sillywilliescore.triangulum_axe" : "Triangulum Axe",
   "item.sillywilliescore.triangulum_hoe" : "Triangulum Hoe",
   "item.sillywilliescore.entangulum_dusted_mold": "Entangulum Dusted Mold",
+  "item.sillywilliescore.wonder_oak_chest_boat": "Wonder Oak Chest Boat",
+  "item.sillywilliescore.wonder_oak_boat": "Wonder Oak Boat",
 
   "creativetab.sillywilliescore.sillywilliescore_items" : "Silly Willies Core",
   "creativetab.sillywilliescore.sillywilliescore_building_blocks" : "Silly Willies Building Blocks",
@@ -64,6 +66,16 @@
   "block.sillywilliescore.wonder_oak_leaves": "Wonder Oak Leaves",
   "block.sillywilliescore.wonder_oak_wood_sapling": "Wonder Oak Sapling",
   "block.sillywilliescore.wonder_oak_planks": "Wonder Oak Planks",
+  "block.sillywilliescore.wonder_oak_slab": "Wonder Oak Slab",
+  "block.sillywilliescore.wonder_oak_stairs": "Wonder Oak Stairs",
+  "block.sillywilliescore.wonder_oak_fence": "Wonder Oak Fence",
+  "block.sillywilliescore.wonder_oak_door": "Wonder Oak Door",
+  "block.sillywilliescore.wonder_oak_trapdoor": "Wonder Oak Trapdoor",
+  "block.sillywilliescore.wonder_oak_fence_gate": "Wonder Oak Fence Gate",
+  "block.sillywilliescore.wonder_oak_pressure_plate": "Wonder Oak Pressure Plate",
+  "block.sillywilliescore.wonder_oak_button": "Wonder Oak Button",
+  "block.sillywilliescore.wonder_oak_sign": "Wonder Oak Sign",
+  "block.sillywilliescore.wonder_oak_hanging_sign": "Wonder Oak Button",
 
   "trim_material.sillywilliescore.triangulum" : "Triangulum Material"
 

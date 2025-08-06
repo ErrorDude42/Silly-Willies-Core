@@ -1,7 +1,7 @@
 package net.errordude42.sillywilliescore.worldgen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
-import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;

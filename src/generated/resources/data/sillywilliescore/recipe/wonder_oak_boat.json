@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "boat",
+  "key": {
+    "b": {
+      "item": "sillywilliescore:wonder_oak_planks"
+    }
+  },
+  "pattern": [
+    "b b",
+    "bbb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:wonder_oak_boat"
+  }
+}

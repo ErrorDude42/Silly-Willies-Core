@@ -1,13 +1,12 @@
 package net.errordude42.sillywilliescore.item;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
-import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -80,16 +79,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SMOOTH_GEOSTONE);
                         output.accept(ModBlocks.SMOOTH_GEOSTONE_SLAB);
                         output.accept(ModBlocks.WONDER_OAK_PLANKS);
-                        output.accept(ModBlocks.WONDER_OAK_SLAB);
                         output.accept(ModBlocks.WONDER_OAK_STAIRS);
+                        output.accept(ModBlocks.WONDER_OAK_SLAB);
                         output.accept(ModBlocks.WONDER_OAK_FENCE);
+                        output.accept(ModBlocks.WONDER_OAK_FENCE_GATE);
                         output.accept(ModBlocks.WONDER_OAK_DOOR);
                         output.accept(ModBlocks.WONDER_OAK_TRAPDOOR);
-                        output.accept(ModBlocks.WONDER_OAK_FENCE_GATE);
                         output.accept(ModBlocks.WONDER_OAK_PRESSURE_PLATE);
                         output.accept(ModBlocks.WONDER_OAK_BUTTON);
-                        output.accept(ModBlocks.WONDER_OAK_SIGN);
-                        output.accept(ModBlocks.WONDER_OAK_HANGING_SIGN);
+                        output.accept(ModItems.WONDER_OAK_SIGN);
+                        output.accept(ModItems.WONDER_OAK_HANGING_SIGN);
+                        output.accept(ModItems.WONDER_OAK_CHEST_BOAT);
+                        output.accept(ModItems.WONDER_OAK_BOAT);
 
                     })
                     .build()
@@ -105,7 +106,6 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_WONDER_OAK_LOG);
                         output.accept(ModBlocks.STRIPPED_WONDER_OAK_WOOD);
                         output.accept(ModBlocks.WONDER_OAK_LEAVES);
-                        output.accept(ModBlocks.WONDER_OAK_PLANKS);
                         output.accept(ModBlocks.WONDER_OAK_SAPLING);
 
                     })

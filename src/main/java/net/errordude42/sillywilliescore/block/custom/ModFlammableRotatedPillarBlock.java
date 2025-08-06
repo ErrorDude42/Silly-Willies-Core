@@ -1,6 +1,6 @@
 package net.errordude42.sillywilliescore.block.custom;
 
-import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;

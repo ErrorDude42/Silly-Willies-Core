@@ -1,12 +1,13 @@
 package net.errordude42.sillywilliescore.datagen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
-import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -114,12 +115,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.WONDER_OAK_FENCE_GATE);
         blockItem(ModBlocks.WONDER_OAK_TRAPDOOR,"_bottom");
 
+        signBlock(ModBlocks.WONDER_OAK_SIGN.get(),ModBlocks.WONDER_OAK_WALL_SIGN.get(),blockTexture(ModBlocks.WONDER_OAK_PLANKS.get()));
+        hangingSignBlock(ModBlocks.WONDER_OAK_HANGING_SIGN.get(),ModBlocks.WONDER_OAK_WALL_HANGING_SIGN.get(),blockTexture(ModBlocks.STRIPPED_WONDER_OAK_LOG.get()));
 
         leavesBlock(ModBlocks.WONDER_OAK_LEAVES);
         saplingBlock(ModBlocks.WONDER_OAK_SAPLING);
 
-        signBlock(ModBlocks.WONDER_OAK_SIGN.get(), ModBlocks.WONDER_OAK_WALL_SIGN.get(),texture(pName(ModBlocks.WONDER_OAK_PLANKS.get())));
-        hangingSignBlock(ModBlocks.WONDER_OAK_HANGING_SIGN.get(), ModBlocks.WONDER_OAK_WALL_HANGING_SIGN.get(),texture(pName(ModBlocks.STRIPPED_WONDER_OAK_LOG.get())));
 
         doorBlockWithRenderType(ModBlocks.WONDER_OAK_DOOR.get(),modLoc("block/wonder_oak_door_bottom"),modLoc("block/wonder_oak_door_top"),"cutout");
         trapdoorBlockWithRenderType(ModBlocks.WONDER_OAK_TRAPDOOR.get(), modLoc("block/wonder_oak_trapdoor"), true ,"cutout");

@@ -1,7 +1,7 @@
 package net.errordude42.sillywilliescore.datagen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
-import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.errordude42.sillywilliescore.item.ModItems;
 import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -80,6 +80,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('b',ModItems.EMPTY_SPOOL.get())
                 .unlockedBy("has_entangulum",has(ModItems.RAW_ENTANGULUM)).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WONDER_OAK_HANGING_SIGN.get())
+                .pattern("a a")
+                .pattern("bbb")
+                .pattern("bbb")
+                .group("hanging_sign")
+                .define('a',Items.CHAIN)
+                .define('b',ModBlocks.STRIPPED_WONDER_OAK_LOG.get())
+                .unlockedBy("has_stripped_wonder_oak",has(ModBlocks.STRIPPED_WONDER_OAK_LOG)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.WONDER_OAK_BOAT)
+                .pattern("b b")
+                .pattern("bbb")
+                .group("boat")
+                .define('b',ModBlocks.WONDER_OAK_PLANKS.get())
+                .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EMPTY_SPOOL.get())
                 .pattern("  a")
                 .pattern(" b ")
@@ -129,6 +146,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_entangulum",
                         has(ModItems.RAW_ENTANGULUM)).save(recipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TRANSPORTATION,ModItems.WONDER_OAK_CHEST_BOAT.get(),1)
+                .requires(Blocks.CHEST)
+                .requires(ModItems.WONDER_OAK_BOAT)
+                .group("chest_boat")
+                .unlockedBy("has_wonder_plank",
+                        has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.WONDER_OAK_PLANKS.get(),4)
+                .requires(ModTags.Items.WONDER_OAK_LOG_OR_WOOD)
+                .group("planks")
+                .unlockedBy("has_wonder_oak",
+                        has(ModTags.Items.WONDER_OAK_LOG_OR_WOOD)).save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.TRIANGULUM.get(),1)
                 .requires(ModItems.INCOMPLETE_TRIANGULUM)
@@ -142,7 +171,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_triangulum_Incom",
                         has(ModItems.INCOMPLETE_TRIANGULUM)).save(recipeOutput);
 
-            stairBuilder(ModBlocks.TRIANGULUM_BRICKS_STAIRS.get(),Ingredient.of(ModBlocks.TRIANGULUM_BRICKS))
+        stairBuilder(ModBlocks.TRIANGULUM_BRICKS_STAIRS.get(),Ingredient.of(ModBlocks.TRIANGULUM_BRICKS))
                     .group("triangulum_bricks")
                     .unlockedBy("has_triangulum_bricks",has(ModBlocks.TRIANGULUM_BRICKS)).save(recipeOutput);
         stairBuilder(ModBlocks.GEOSTONE_STAIRS.get(),Ingredient.of(ModBlocks.GEOSTONE))
@@ -157,12 +186,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stairBuilder(ModBlocks.GEOSTONE_COBBLE_STAIRS.get(),Ingredient.of(ModBlocks.GEOSTONE_COBBLE))
                 .group("geostone_cobble")
                 .unlockedBy("has_geostone_cobble",has(ModBlocks.GEOSTONE_COBBLE)).save(recipeOutput);
-            buttonBuilder(ModBlocks.TRIANGULUM_BRICKS_BUTTON.get(),Ingredient.of(ModBlocks.TRIANGULUM_BRICKS))
+        stairBuilder(ModBlocks.WONDER_OAK_STAIRS.get(),Ingredient.of(ModBlocks.WONDER_OAK_PLANKS))
+                .group("wooden_stairs")
+                .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+
+        buttonBuilder(ModBlocks.TRIANGULUM_BRICKS_BUTTON.get(),Ingredient.of(ModBlocks.TRIANGULUM_BRICKS))
                 .group("triangulum_bricks")
                 .unlockedBy("has_triangulum_bricks",has(ModBlocks.TRIANGULUM_BRICKS)).save(recipeOutput);
         buttonBuilder(ModBlocks.GEOSTONE_BUTTON.get(),Ingredient.of(ModBlocks.GEOSTONE))
                 .group("geostone")
                 .unlockedBy("has_geostone",has(ModBlocks.GEOSTONE)).save(recipeOutput);
+        buttonBuilder(ModBlocks.WONDER_OAK_BUTTON.get(),Ingredient.of(ModBlocks.WONDER_OAK_PLANKS))
+                .group("wooden_button")
+                .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
 
             slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.TRIANGULUM_BRICKS_SLAB.get(),ModBlocks.TRIANGULUM_BRICKS);
             slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_SLAB.get(),ModBlocks.GEOSTONE);
@@ -171,12 +207,43 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.MOSSY_GEOSTONE_BRICKS_SLAB.get(),ModBlocks.MOSSY_GEOSTONE_BRICKS);
             slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_COBBLE_SLAB.get(),ModBlocks.GEOSTONE_COBBLE);
 
+            slabBuilder(RecipeCategory.BUILDING_BLOCKS,ModBlocks.WONDER_OAK_SLAB.get(),Ingredient.of(ModBlocks.WONDER_OAK_PLANKS))
+                    .group("wooden_slab")
+                    .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+
             wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.TRIANGULUM_BRICKS_WALL.get(),ModBlocks.TRIANGULUM_BRICKS);
             wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_COBBLE_WALL.get(),ModBlocks.GEOSTONE_COBBLE);
             wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.GEOSTONE_BRICKS_WALL.get(),ModBlocks.GEOSTONE_BRICKS);
             wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS,ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL.get(),ModBlocks.MOSSY_GEOSTONE_BRICKS);
+
             pressurePlate(recipeOutput,ModBlocks.TRIANGULUM_BRICKS_PRESSURE_PLATE.get(),ModBlocks.TRIANGULUM_BRICKS);
             pressurePlate(recipeOutput,ModBlocks.GEOSTONE_PRESSURE_PLATE.get(),ModBlocks.GEOSTONE);
+
+            pressurePlateBuilder(RecipeCategory.REDSTONE,ModBlocks.WONDER_OAK_PRESSURE_PLATE.get(),Ingredient.of(ModBlocks.WONDER_OAK_PLANKS))
+                    .group("wooden_pressure_plate")
+                    .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);;
+
+            fenceBuilder(ModBlocks.WONDER_OAK_FENCE.get(),Ingredient.of(ModBlocks.WONDER_OAK_PLANKS))
+                    .group("wooden_fence")
+                    .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+            fenceGateBuilder(ModBlocks.WONDER_OAK_FENCE_GATE.get(),Ingredient.of(ModBlocks.WONDER_OAK_PLANKS))
+                    .group("wooden_fence_gate")
+                    .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+
+            signBuilder(ModBlocks.WONDER_OAK_SIGN.get(),Ingredient.of(ModBlocks.WONDER_OAK_PLANKS))
+                    .group("wooden_sign")
+                    .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+
+            doorBuilder(ModBlocks.WONDER_OAK_DOOR.get(),Ingredient.of(ModBlocks.WONDER_OAK_PLANKS))
+                    .group("wooden_door")
+                    .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+
+            trapdoorBuilder(ModBlocks.WONDER_OAK_TRAPDOOR.get(),Ingredient.of(ModBlocks.WONDER_OAK_PLANKS))
+                    .group("wooden_trapdoor")
+                    .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+
+
+
 
 
         oreSmelting(recipeOutput,
@@ -237,6 +304,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
     }
+
+
 
     protected static void stonecutterResultFromBase(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, ItemLike material,int resultCount) {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(material), category, result, resultCount)

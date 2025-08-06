@@ -1,7 +1,7 @@
 package net.errordude42.sillywilliescore.datagen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
-import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.errordude42.sillywilliescore.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -11,6 +11,8 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CeilingHangingSignBlock;
+import net.minecraft.world.level.block.StandingSignBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -129,6 +131,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         differentItemTexture(ModBlocks.WONDER_OAK_SIGN);
         differentItemTexture(ModBlocks.WONDER_OAK_HANGING_SIGN);
+
+        differentItemTexture(ModItems.WONDER_OAK_BOAT);
+        differentItemTexture(ModItems.WONDER_OAK_CHEST_BOAT);
+
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
@@ -137,7 +143,14 @@ public class ModItemModelProvider extends ItemModelProvider {
                 ResourceLocation.fromNamespaceAndPath(SillyWilliesCore.MOD_ID,"block/" + item.getId().getPath()));
     }
 
+
     private ItemModelBuilder differentItemTexture (DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(SillyWilliesCore.MOD_ID,"item/" + item.getId().getPath()+"_item"));
+    }
+
+    private ItemModelBuilder differentItemTexture (DeferredItem<?> item) {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(SillyWilliesCore.MOD_ID,"item/" + item.getId().getPath()+"_item"));

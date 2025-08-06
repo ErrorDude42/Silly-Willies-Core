@@ -1,6 +1,6 @@
 package net.errordude42.sillywilliescore.datagen;
 
-import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.errordude42.sillywilliescore.item.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -49,11 +49,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
      dropSelf(ModBlocks.WONDER_OAK_TRAPDOOR.get());
      dropSelf(ModBlocks.WONDER_OAK_PRESSURE_PLATE.get());
      dropSelf(ModBlocks.WONDER_OAK_BUTTON.get());
-     dropSelf(ModBlocks.WONDER_OAK_SIGN.get());
-     dropSelf(ModBlocks.WONDER_OAK_HANGING_SIGN.get());
+    dropSelf(ModBlocks.WONDER_OAK_SIGN.get());
+    dropSelf(ModBlocks.WONDER_OAK_HANGING_SIGN.get());
 
-     dropOther(ModBlocks.WONDER_OAK_WALL_SIGN.get(),ModBlocks.WONDER_OAK_SIGN.get());
-     dropOther(ModBlocks.WONDER_OAK_WALL_HANGING_SIGN.get(),ModBlocks.WONDER_OAK_HANGING_SIGN.get());
+    dropOther(ModBlocks.WONDER_OAK_WALL_SIGN.get(),ModBlocks.WONDER_OAK_SIGN.get());
+    dropOther(ModBlocks.WONDER_OAK_WALL_HANGING_SIGN.get(),ModBlocks.WONDER_OAK_HANGING_SIGN.get());
 
 
      add(ModBlocks.GEOSTONE.get(),

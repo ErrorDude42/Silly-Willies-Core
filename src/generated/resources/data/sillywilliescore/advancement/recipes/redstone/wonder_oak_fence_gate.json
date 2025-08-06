@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "sillywilliescore:wonder_oak_fence_gate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wonder_plank": {
+      "conditions": {
+        "items": [
+          {
+            "items": "sillywilliescore:wonder_oak_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wonder_plank"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "sillywilliescore:wonder_oak_fence_gate"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "hanging_sign",
+  "key": {
+    "a": {
+      "item": "minecraft:chain"
+    },
+    "b": {
+      "item": "sillywilliescore:stripped_wonder_oak_log"
+    }
+  },
+  "pattern": [
+    "a a",
+    "bbb",
+    "bbb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "sillywilliescore:wonder_oak_hanging_sign"
+  }
+}

@@ -1,12 +1,13 @@
 package net.errordude42.sillywilliescore;
 
-import net.errordude42.sillywilliescore.block.ModBlocks;
+import net.errordude42.sillywilliescore.entity.boat.ModBoatRenderer;
 import net.errordude42.sillywilliescore.item.ModCreativeModeTabs;
 import net.errordude42.sillywilliescore.item.ModItems;
 import net.errordude42.sillywilliescore.loot.ModLootModifiers;
 import net.errordude42.sillywilliescore.util.ModWoodTypes;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -34,6 +35,11 @@ public class SillyWilliesCore {
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
+    public static ResourceLocation rl(String s)
+    {
+        return ResourceLocation.fromNamespaceAndPath(SillyWilliesCore.MOD_ID, s);
+    }
+
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public SillyWilliesCore(IEventBus modEventBus, ModContainer modContainer) {
@@ -49,14 +55,31 @@ public class SillyWilliesCore {
 
         ModCreativeModeTabs.register(modEventBus);
 
+
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntity.register(modEventBus);
+        ModEntities.register(modEventBus);
+
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
+
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.WONDER_OAK);
+
+            EntityRenderers.register(ModEntities.MOD_BOAT.get(), context -> new ModBoatRenderer(context, false));
+            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), context -> new ModBoatRenderer(context, true));
+        }
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -77,13 +100,5 @@ public class SillyWilliesCore {
 
     }
 
-    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-            Sheets.addWoodType(ModWoodTypes.WONDER_OAK);
 
-
-        }
-    }
 }

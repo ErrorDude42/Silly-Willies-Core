@@ -1,6 +1,8 @@
 package net.errordude42.sillywilliescore.item;
 
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.errordude42.sillywilliescore.SillyWilliesCore;
+import net.errordude42.sillywilliescore.entity.boat.ModBoatEntity;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -8,9 +10,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SillyWilliesCore.MOD_ID);
-
-    //public static final DeferredItem<Item> CODENAME = ITEMS.register("namenospaces",
-    //      () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> TRIANGULUMRAW = ITEMS.register("triangulumraw",
             () -> new Item(new Item.Properties()));
@@ -73,6 +72,15 @@ public class ModItems {
     public static final DeferredItem<HoeItem> TRIANGULUM_HOE = ITEMS.register("triangulum_hoe",
             () -> new HoeItem(ModToolTiers.TRIANGULUM, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.TRIANGULUM, -5F, 0f))));
+
+    public static final DeferredItem<Item> WONDER_OAK_SIGN = ITEMS.register("wonder_oak_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.WONDER_OAK_SIGN.get(), ModBlocks.WONDER_OAK_WALL_SIGN.get()));
+    public static final DeferredItem<Item> WONDER_OAK_HANGING_SIGN = ITEMS.register("wonder_oak_hanging_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.WONDER_OAK_HANGING_SIGN.get(), ModBlocks.WONDER_OAK_WALL_HANGING_SIGN.get()));
+
+    public static final DeferredItem<Item> WONDER_OAK_CHEST_BOAT = ITEMS.register("wonder_oak_chest_boat", () -> new ModBoatItem(true, ModBoatEntity.Type.WONDER_OAK, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> WONDER_OAK_BOAT = ITEMS.register("wonder_oak_boat", () -> new ModBoatItem(false, ModBoatEntity.Type.WONDER_OAK, new Item.Properties().stacksTo(1)));
+
 
 
     public static void register(IEventBus eventBus){
