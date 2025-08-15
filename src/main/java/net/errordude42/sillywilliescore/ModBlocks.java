@@ -457,7 +457,19 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WONDER_OAK_SAPLING = registerBlock("wonder_oak_wood_sapling",
             ()-> new ModSaplingBlock(
                     ModTreeGrowers.WONDER_OAK,
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING),ModBlocks.SILT));
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING),ModBlocks.SILT)
+            {
+                @Override
+                protected boolean mayPlaceOn(BlockState state, BlockGetter pLevel, BlockPos pPos)
+                {
+                    if (state.getBlock().defaultBlockState() == ModBlocks.SILT.get().defaultBlockState())
+                        return true;
+
+                    return state.getBlock().defaultBlockState() == ModBlocks.SILT.get().defaultBlockState();
+                }
+            }
+    );
+
 
 
 

@@ -30,8 +30,14 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
         this.add("tri_up_temp_to_end_city_chest",
                 new AddItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/end_city_treasure")).build(),
-                        LootItemRandomChanceCondition.randomChance(.20f).build()
+                        LootItemRandomChanceCondition.randomChance(.2f).build()
                 }, ModItems.TRIANGULUMUPGRADETEMPLATE.get()
+                ));
+        this.add("silt_to_end_city_chest",
+                new AddItemModifier(new LootItemCondition[] {
+                        new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/end_city_treasure")).build(),
+                        LootItemRandomChanceCondition.randomChance(.3f).build()
+                },  ModBlocks.SILT.asItem()
                 ));
 
     }

@@ -43,14 +43,6 @@ public class ModConfiguredFeatures {
 
         register(context, OVERWORLD_TRIANGULUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTriangulumOres,9));
 
-        register(context, WONDER_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.WONDER_OAK_LOG.get()),
-                new ForkingTrunkPlacer(4, 4, 3),
-
-                BlockStateProvider.simple(ModBlocks.WONDER_OAK_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
-
-                new TwoLayersFeatureSize(1, 0, 2)).build());
 
     }
 
