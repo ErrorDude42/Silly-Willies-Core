@@ -1,5 +1,6 @@
 package net.errordude42.sillywilliescore;
 
+import net.errordude42.sillywilliescore.effect.ModEffects;
 import net.errordude42.sillywilliescore.entity.boat.ModBoatRenderer;
 import net.errordude42.sillywilliescore.item.ModCreativeModeTabs;
 import net.errordude42.sillywilliescore.item.ModItems;
@@ -8,10 +9,15 @@ import net.errordude42.sillywilliescore.util.ModWoodTypes;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -61,7 +67,7 @@ public class SillyWilliesCore {
         ModBlocks.register(modEventBus);
         ModBlockEntity.register(modEventBus);
         ModEntities.register(modEventBus);
-
+        ModEffects.register(modEventBus);
 
 
         // Register the item to a creative tab
@@ -69,7 +75,11 @@ public class SillyWilliesCore {
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+
     }
+
+
 
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {

@@ -3,10 +3,13 @@ package net.errordude42.sillywilliescore.item;
 import net.errordude42.sillywilliescore.ModBlocks;
 import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.entity.boat.ModBoatEntity;
+import net.errordude42.sillywilliescore.item.custom.LightningMace;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.jar.Attributes;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SillyWilliesCore.MOD_ID);
@@ -81,7 +84,8 @@ public class ModItems {
     public static final DeferredItem<Item> WONDER_OAK_CHEST_BOAT = ITEMS.register("wonder_oak_chest_boat", () -> new ModBoatItem(true, ModBoatEntity.Type.WONDER_OAK, new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> WONDER_OAK_BOAT = ITEMS.register("wonder_oak_boat", () -> new ModBoatItem(false, ModBoatEntity.Type.WONDER_OAK, new Item.Properties().stacksTo(1)));
 
-
+    public static final DeferredItem<MaceItem> TRIANGULUM_MACE = ITEMS.register("triangulum_mace",
+        () -> new LightningMace(new Item.Properties().stacksTo(1).attributes(MaceItem.createAttributes()).durability(1000)) );
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

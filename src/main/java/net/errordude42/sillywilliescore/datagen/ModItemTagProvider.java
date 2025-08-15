@@ -31,6 +31,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ModTags.Items.GEOSTONE_STONECUTTING).add(ModBlocks.GEOSTONE.asItem()).add(ModBlocks.GEOSTONE_BRICKS.asItem());
 
+        tag(ItemTags.MACE_ENCHANTABLE)
+                .add(ModItems.TRIANGULUM_MACE.get());
 
         tag(ItemTags.SWORDS)
                 .add(ModItems.TRIANGULUM_SWORD.get());

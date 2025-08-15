@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TRIANGULUM_SWORD);
                         output.accept(ModItems.TRIANGULUM_PICKAXE);
                         output.accept(ModItems.TRIANGULUM_SHOVEL);
+                        output.accept(ModItems.TRIANGULUM_MACE);
                         output.accept(ModItems.TRIANGULUM);
                         output.accept(ModItems.INCOMPLETE_TRIANGULUM);
                         output.accept(ModItems.TRIANGULUMRAW);

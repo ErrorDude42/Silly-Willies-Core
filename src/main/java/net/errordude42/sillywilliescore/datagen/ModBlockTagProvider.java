@@ -9,6 +9,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.internal.NeoForgeBlockTagsProvider;
@@ -145,6 +146,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.PLANKS)
                 .add(ModBlocks.WONDER_OAK_PLANKS.get());
 
+        tag(Tags.Blocks.STRIPPED_LOGS)
+                .add(ModBlocks.STRIPPED_WONDER_OAK_LOG.get());
 
+        tag(Tags.Blocks.STRIPPED_WOODS)
+                .add(ModBlocks.STRIPPED_WONDER_OAK_WOOD.get());
     }
 }

@@ -7,21 +7,17 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_wonder_plank": {
+    "in_water": {
       "conditions": {
-        "items": [
-          {
-            "items": "sillywilliescore:wonder_oak_planks"
-          }
-        ]
+        "block": "minecraft:water"
       },
-      "trigger": "minecraft:inventory_changed"
+      "trigger": "minecraft:enter_block"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_wonder_plank"
+      "in_water"
     ]
   ],
   "rewards": {

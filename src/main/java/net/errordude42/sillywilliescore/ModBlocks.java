@@ -455,7 +455,9 @@ public class ModBlocks {
     );
 
     public static final DeferredBlock<Block> WONDER_OAK_SAPLING = registerBlock("wonder_oak_wood_sapling",
-            ()-> new SaplingBlock(ModTreeGrowers.WONDER_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            ()-> new ModSaplingBlock(
+                    ModTreeGrowers.WONDER_OAK,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING),ModBlocks.SILT));
 
 
 

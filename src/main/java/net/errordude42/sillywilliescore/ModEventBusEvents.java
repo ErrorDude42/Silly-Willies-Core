@@ -13,6 +13,7 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 @EventBusSubscriber(modid = SillyWilliesCore.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class ModEventBusEvents {
 
+
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event)
     {

@@ -7,6 +7,7 @@ import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -93,9 +94,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("b b")
                 .pattern("bbb")
                 .group("boat")
+                .showNotification(true)
+                .unlockedBy("in_water", insideOf(Blocks.WATER))
                 .define('b',ModBlocks.WONDER_OAK_PLANKS.get())
-                .unlockedBy("has_wonder_plank",has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
-
+                .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EMPTY_SPOOL.get())
                 .pattern("  a")
@@ -150,8 +152,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Blocks.CHEST)
                 .requires(ModItems.WONDER_OAK_BOAT)
                 .group("chest_boat")
-                .unlockedBy("has_wonder_plank",
-                        has(ModBlocks.WONDER_OAK_PLANKS)).save(recipeOutput);
+                .unlockedBy("has_boat", has(ItemTags.BOATS))
+                .save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.WONDER_OAK_PLANKS.get(),4)
                 .requires(ModTags.Items.WONDER_OAK_LOG_OR_WOOD)

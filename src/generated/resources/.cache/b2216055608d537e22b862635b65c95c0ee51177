@@ -1,4 +1,6 @@
-// 1.21.1	2025-08-05T21:18:17.8406256	Tags for minecraft:block mod id sillywilliescore
+// 1.21.1	2025-08-13T22:42:17.5846948	Tags for minecraft:block mod id sillywilliescore
+8e6cadd37dd4396edc0cc2bbe478c2e61f3e3366 data/c/tags/block/stripped_logs.json
+3b2a4e4b75cf77f405a7de324891156d7b341ad3 data/c/tags/block/stripped_woods.json
 c07d566bbe55eca4abd3d17f243f9da771a4b947 data/minecraft/tags/block/buttons.json
 11c7fc60f3d97f5934197f9aaac7bbb3c0156afa data/minecraft/tags/block/doors.json
 d0d4cee331fea897512be71e31b0ed0d2b3a43b7 data/minecraft/tags/block/fences.json
