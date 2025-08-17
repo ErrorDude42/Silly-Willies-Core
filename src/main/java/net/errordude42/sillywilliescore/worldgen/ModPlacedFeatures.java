@@ -37,7 +37,7 @@ public class ModPlacedFeatures {
 
 
         register(context,WONDER_OAK_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.WONDER_OAK_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(5,0.2f,6),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(7,0.2f,6),
                         ModBlocks.WONDER_OAK_SAPLING.get()));
     }
 
