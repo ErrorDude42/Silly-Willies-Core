@@ -79,6 +79,10 @@
   "block.sillywilliescore.wonder_oak_hanging_sign": "Wonder Oak Button",
   "block.sillywilliescore.twisted_grass": "Twisted Grass",
 
+  "biome.sillywilliescore.geo_plains": "geo_plains",
+  "biome.sillywilliescore.geo_forest": "geo_forest",
+
+
   "trim_material.sillywilliescore.triangulum" : "Triangulum Material"
 
 }

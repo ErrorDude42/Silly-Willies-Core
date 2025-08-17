@@ -8,6 +8,7 @@ import net.minecraft.world.level.biome.Biome;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> GEO_PLAINS = createKey("geo_plains");
+    public static final ResourceKey<Biome> GEO_FOREST = createKey("geo_forest");
 
     private static ResourceKey<Biome> createKey(String name) {
         return ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(SillyWilliesCore.MOD_ID, name));

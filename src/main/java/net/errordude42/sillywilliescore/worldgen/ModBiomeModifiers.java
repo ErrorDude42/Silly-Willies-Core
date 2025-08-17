@@ -1,6 +1,7 @@
 package net.errordude42.sillywilliescore.worldgen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
+import net.errordude42.sillywilliescore.util.ModBiomes;
 import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -19,6 +20,8 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_TWISTED_GRASS = registerKey("add_twisted_grass");
 
+    public static final ResourceKey<BiomeModifier> ADD_TREE_WONDER_OAK = registerKey("add_tree_wonder_oak");
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -34,6 +37,13 @@ public class ModBiomeModifiers {
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.TWISTED_GRASS_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
+
+        context.register(ADD_TREE_WONDER_OAK, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(ModBiomes.GEO_FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WONDER_OAK_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

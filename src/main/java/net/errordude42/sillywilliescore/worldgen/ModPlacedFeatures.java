@@ -1,10 +1,13 @@
 package net.errordude42.sillywilliescore.worldgen;
 
+import com.mojang.realmsclient.gui.screens.RealmsGenericErrorScreen;
+import net.errordude42.sillywilliescore.ModBlocks;
 import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -16,6 +19,8 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> TRIANGULUM_ORE_PLACED_KEY = registerKey("triangulum_ore_placed");
+
+    public static final ResourceKey<PlacedFeature> WONDER_OAK_PLACED_KEY = registerKey("wonder_oak_placed");
 
     public static final ResourceKey<PlacedFeature> TWISTED_GRASS_PLACED_KEY = registerKey("twisted_grass_placed");
 
@@ -29,7 +34,13 @@ public class ModPlacedFeatures {
     register(context,TWISTED_GRASS_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.TWISTED_GRASS_KEY),
             List.of(RarityFilter.onAverageOnceEvery(1), InSquarePlacement.spread(),
                     PlacementUtils.HEIGHTMAP_WORLD_SURFACE,BiomeFilter.biome()));
+
+
+        register(context,WONDER_OAK_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.WONDER_OAK_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(5,0.2f,6),
+                        ModBlocks.WONDER_OAK_SAPLING.get()));
     }
+
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
         return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(SillyWilliesCore.MOD_ID, name));
