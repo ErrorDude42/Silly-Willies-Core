@@ -1,7 +1,7 @@
 package net.errordude42.sillywilliescore.datagen;
 
-import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.ModBlocks;
+import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -11,8 +11,6 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CeilingHangingSignBlock;
-import net.minecraft.world.level.block.StandingSignBlock;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -128,6 +126,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.MOSSY_GEOSTONE_BRICKS_WALL,ModBlocks.MOSSY_GEOSTONE_BRICKS);
 
         saplingItem(ModBlocks.WONDER_OAK_SAPLING);
+        saplingItem(ModBlocks.TWISTED_GRASS);
 
         differentItemTexture(ModBlocks.WONDER_OAK_SIGN);
         differentItemTexture(ModBlocks.WONDER_OAK_HANGING_SIGN);

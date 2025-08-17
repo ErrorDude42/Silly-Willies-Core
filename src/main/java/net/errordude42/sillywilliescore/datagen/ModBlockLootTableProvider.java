@@ -9,6 +9,7 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 
@@ -90,6 +91,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.WONDER_OAK_SLAB.get())
         );
 
+        add(ModBlocks.TWISTED_GRASS.get(), block ->
+                createNoSeedGrass(ModBlocks.TWISTED_GRASS.get())
+                );
 
         this.dropSelf(ModBlocks.WONDER_OAK_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_WONDER_OAK_WOOD.get());
@@ -115,4 +119,14 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
     }
+
+
+    protected LootTable.Builder createNoSeedGrass(Block block) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createShearsDispatchTable(
+                block,this.applyExplosionDecay(block, LootItem.lootTableItem(Blocks.AIR)));
+
+    }
+
+
 }

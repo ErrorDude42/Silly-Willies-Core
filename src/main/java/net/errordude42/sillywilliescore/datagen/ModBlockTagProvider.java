@@ -1,18 +1,15 @@
 
 package net.errordude42.sillywilliescore.datagen;
 
-import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.ModBlocks;
+import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.common.data.internal.NeoForgeBlockTagsProvider;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;

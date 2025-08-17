@@ -1,13 +1,12 @@
 package net.errordude42.sillywilliescore.datagen;
 
-import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.ModBlocks;
+import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -121,6 +120,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.WONDER_OAK_LEAVES);
         saplingBlock(ModBlocks.WONDER_OAK_SAPLING);
 
+        saplingBlock(ModBlocks.TWISTED_GRASS);
 
         doorBlockWithRenderType(ModBlocks.WONDER_OAK_DOOR.get(),modLoc("block/wonder_oak_door_bottom"),modLoc("block/wonder_oak_door_top"),"cutout");
         trapdoorBlockWithRenderType(ModBlocks.WONDER_OAK_TRAPDOOR.get(), modLoc("block/wonder_oak_trapdoor"), true ,"cutout");

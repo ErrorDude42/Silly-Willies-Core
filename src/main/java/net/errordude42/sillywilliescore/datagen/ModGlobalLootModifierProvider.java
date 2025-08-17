@@ -1,7 +1,7 @@
 package net.errordude42.sillywilliescore.datagen;
 
-import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.ModBlocks;
+import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.item.ModItems;
 import net.errordude42.sillywilliescore.loot.AddItemModifier;
 import net.minecraft.core.HolderLookup;

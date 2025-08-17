@@ -1,6 +1,7 @@
 package net.errordude42.sillywilliescore.worldgen;
 
 import net.errordude42.sillywilliescore.SillyWilliesCore;
+import net.errordude42.sillywilliescore.util.ModTags;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -16,6 +17,8 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_TRIANGULUM_ORE = registerKey("add_triangulum_ore");
 
+    public static final ResourceKey<BiomeModifier> ADD_TWISTED_GRASS = registerKey("add_twisted_grass");
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -26,6 +29,11 @@ public class ModBiomeModifiers {
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
 
+        context.register(ADD_TWISTED_GRASS, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.IS_GEO),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.TWISTED_GRASS_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

@@ -3,7 +3,6 @@ package net.errordude42.sillywilliescore.worldgen.tree;
 import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.worldgen.ModConfiguredFeatures;
 import net.minecraft.world.level.block.grower.TreeGrower;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 
 import java.util.Optional;
 

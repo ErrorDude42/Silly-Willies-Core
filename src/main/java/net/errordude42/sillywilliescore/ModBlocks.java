@@ -1,6 +1,8 @@
 package net.errordude42.sillywilliescore;
 
-import net.errordude42.sillywilliescore.block.custom.*;
+import net.errordude42.sillywilliescore.block.custom.ModFlammableRotatedPillarBlock;
+import net.errordude42.sillywilliescore.block.custom.ModPlantBlock;
+import net.errordude42.sillywilliescore.block.custom.ModSaplingBlock;
 import net.errordude42.sillywilliescore.block.sign.ModHangingSignBlock;
 import net.errordude42.sillywilliescore.block.sign.ModStandingSignBlock;
 import net.errordude42.sillywilliescore.block.sign.ModWallHangingSignBlock;
@@ -20,6 +22,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -31,7 +37,7 @@ public class ModBlocks {
             DeferredRegister.createBlocks(SillyWilliesCore.MOD_ID);
 
     public static final DeferredBlock<Block> SILT = registerBlock("silt",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .strength(1f).sound(SoundType.MUD).mapColor(MapColor.CLAY)
             ));
 
@@ -470,6 +476,28 @@ public class ModBlocks {
             }
     );
 
+    public static final DeferredBlock<Block> TWISTED_GRASS =
+            registerBlock(
+                    "twisted_grass", () ->
+                            new ModPlantBlock(BlockBehaviour.Properties.of()
+                                    .sound(SoundType.GRASS)
+                                    .noCollission()
+                                    .noOcclusion()
+                                    .instabreak()
+                                    .offsetType(BlockBehaviour.OffsetType.XZ)
+                                    .pushReaction(PushReaction.DESTROY)
+                                    .replaceable()
+                            )
+                            {
+                                @Override
+                                protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context)
+                                {
+                                    Vec3 vec3 = state.getOffset(level, pos);
+                                    VoxelShape shape = Block.box(3.0F, 0.0F, 3.0F, 13.0F, 12.0F, 13.0F);
+                                    return shape.move(vec3.x, vec3.y, vec3.z);
+                                }
+                            }
+            );
 
 
 

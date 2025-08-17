@@ -4,13 +4,12 @@ import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
@@ -18,12 +17,18 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> TRIANGULUM_ORE_PLACED_KEY = registerKey("triangulum_ore_placed");
 
+    public static final ResourceKey<PlacedFeature> TWISTED_GRASS_PLACED_KEY = registerKey("twisted_grass_placed");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context){
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
     register(context,TRIANGULUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_TRIANGULUM_ORE_KEY),
             ModOrePlacement.rareOrePlacement(6, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64),VerticalAnchor.absolute(-20))
             ));
+
+    register(context,TWISTED_GRASS_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.TWISTED_GRASS_KEY),
+            List.of(RarityFilter.onAverageOnceEvery(1), InSquarePlacement.spread(),
+                    PlacementUtils.HEIGHTMAP_WORLD_SURFACE,BiomeFilter.biome()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

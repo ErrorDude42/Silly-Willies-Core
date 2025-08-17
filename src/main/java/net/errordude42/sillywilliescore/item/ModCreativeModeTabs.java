@@ -1,7 +1,7 @@
 package net.errordude42.sillywilliescore.item;
 
-import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.errordude42.sillywilliescore.ModBlocks;
+import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -101,6 +101,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.WONDER_OAK_SAPLING.get()))
                     .title(Component.translatable("creativetab.sillywilliescore.sillywilliescore_nature_blocks"))
                     .displayItems((itemDisplayParameters, output)-> {
+                        output.accept(ModBlocks.TWISTED_GRASS);
                         output.accept(ModBlocks.SILT);
                         output.accept(ModBlocks.WONDER_OAK_LOG);
                         output.accept(ModBlocks.WONDER_OAK_WOOD);

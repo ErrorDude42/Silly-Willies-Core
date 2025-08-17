@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-04T21:21:20.8782074	Loot Tables
+// 1.21.1	2025-08-15T21:47:25.3608868	Loot Tables
 5e8a8f3aeb7fa857ecd28e41a221671f57644f0f data/sillywilliescore/loot_table/blocks/block_of_raw_entangulum.json
 d5d18c3a72fbf16587e78ab90913821355e33e2e data/sillywilliescore/loot_table/blocks/block_of_raw_triangulum.json
 bfb4d69d46bdc3a49c563692e524442347878d15 data/sillywilliescore/loot_table/blocks/chisled_geostone.json
@@ -33,6 +33,7 @@ a5a3a42dbf68739ca449593e2c544e2291ab2d89 data/sillywilliescore/loot_table/blocks
 7341e5310c620086753fd00516624c7631abbcd6 data/sillywilliescore/loot_table/blocks/triangulum_bricks_slab.json
 77739733fe2ef5ba9b7bbc7947bb193ec0f00c44 data/sillywilliescore/loot_table/blocks/triangulum_bricks_stairs.json
 ac262bc92f34ff3d72949c2f2bb2cf12157491a3 data/sillywilliescore/loot_table/blocks/triangulum_bricks_wall.json
+407c0702ba7e3a3baa370ecb36f5aca88602038d data/sillywilliescore/loot_table/blocks/twisted_grass.json
 1959ff4b2ca3e007d84cf85b0aaaf863547b637e data/sillywilliescore/loot_table/blocks/wonder_oak_button.json
 5f00c06f4f44144ab77e36d48934d462532f454a data/sillywilliescore/loot_table/blocks/wonder_oak_door.json
 2c86ba66ca38383ae6e12f2dc3f79f923b6dca9e data/sillywilliescore/loot_table/blocks/wonder_oak_fence.json

@@ -1,5 +1,8 @@
-// 1.21.1	2025-08-15T11:56:29.5838539	Registries
+// 1.21.1	2025-08-16T23:06:09.433096	Registries
 011ad9d84a191727a9f96c0beac602d24c8ef741 data/sillywilliescore/neoforge/biome_modifier/add_triangulum_ore.json
+d710b089fe7179b9026747efa1314d214665e875 data/sillywilliescore/neoforge/biome_modifier/add_twisted_grass.json
 993783171b223096d0d62696f50c79c305889181 data/sillywilliescore/trim_material/triangulum.json
 c674a9bbab88a9e3135c2f3bd0ef91447499e692 data/sillywilliescore/worldgen/configured_feature/triangulum_ore.json
+bcff564416e9ac2bc776ac5ec6eb5652e61a2ccd data/sillywilliescore/worldgen/configured_feature/twisted_grass.json
 f2ee00b8aa1526840c084e2f75b4023f1694a937 data/sillywilliescore/worldgen/placed_feature/triangulum_ore_placed.json
+15f99ca61dcbba22f441774496c6dc995aadf91c data/sillywilliescore/worldgen/placed_feature/twisted_grass_placed.json
