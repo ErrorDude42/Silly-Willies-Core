@@ -52,6 +52,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
      dropSelf(ModBlocks.WONDER_OAK_BUTTON.get());
     dropSelf(ModBlocks.WONDER_OAK_SIGN.get());
     dropSelf(ModBlocks.WONDER_OAK_HANGING_SIGN.get());
+    dropSelf(ModBlocks.GEOMETRIUS.get());
+
 
     dropOther(ModBlocks.WONDER_OAK_WALL_SIGN.get(),ModBlocks.WONDER_OAK_SIGN.get());
     dropOther(ModBlocks.WONDER_OAK_WALL_HANGING_SIGN.get(),ModBlocks.WONDER_OAK_HANGING_SIGN.get());

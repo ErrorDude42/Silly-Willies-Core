@@ -499,7 +499,19 @@ public class ModBlocks {
                             }
             );
 
-
+    public static final DeferredBlock<Block> GEOMETRIUS =
+            registerBlock(
+                    "geometrius", () ->
+                            new ModPlantBlock(BlockBehaviour.Properties.of()
+                                    .sound(SoundType.GRASS)
+                                    .noCollission()
+                                    .noOcclusion()
+                                    .instabreak()
+                                    .offsetType(BlockBehaviour.OffsetType.XZ)
+                                    .pushReaction(PushReaction.DESTROY)
+                                    .mapColor((MapColor.COLOR_YELLOW))
+                            )
+            );
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

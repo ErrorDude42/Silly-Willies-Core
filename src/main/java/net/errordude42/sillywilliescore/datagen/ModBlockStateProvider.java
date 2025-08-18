@@ -122,6 +122,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         saplingBlock(ModBlocks.TWISTED_GRASS);
 
+        saplingBlock(ModBlocks.GEOMETRIUS);
+
         doorBlockWithRenderType(ModBlocks.WONDER_OAK_DOOR.get(),modLoc("block/wonder_oak_door_bottom"),modLoc("block/wonder_oak_door_top"),"cutout");
         trapdoorBlockWithRenderType(ModBlocks.WONDER_OAK_TRAPDOOR.get(), modLoc("block/wonder_oak_trapdoor"), true ,"cutout");
 

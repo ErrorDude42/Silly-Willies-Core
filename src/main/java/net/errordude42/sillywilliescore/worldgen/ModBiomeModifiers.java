@@ -20,6 +20,8 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_TWISTED_GRASS = registerKey("add_twisted_grass");
 
+    public static final ResourceKey<BiomeModifier> ADD_GEOMETRIUS = registerKey("add_geometrius");
+
     public static final ResourceKey<BiomeModifier> ADD_TREE_WONDER_OAK = registerKey("add_tree_wonder_oak");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
@@ -41,6 +43,12 @@ public class ModBiomeModifiers {
         context.register(ADD_TREE_WONDER_OAK, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(ModBiomes.GEO_FOREST)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WONDER_OAK_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
+        context.register(ADD_GEOMETRIUS, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.IS_GEO),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GEOMETRIUS_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
 

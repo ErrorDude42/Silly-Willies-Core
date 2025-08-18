@@ -148,5 +148,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(Tags.Blocks.STRIPPED_WOODS)
                 .add(ModBlocks.STRIPPED_WONDER_OAK_WOOD.get());
+
+
     }
 }

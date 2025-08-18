@@ -29,6 +29,8 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?,?>> TWISTED_GRASS_KEY = registerKey("twisted_grass");
 
+    public static final ResourceKey<ConfiguredFeature<?,?>> GEOMETRIUS_KEY = registerKey("geometrius");
+
     public static final ResourceKey<ConfiguredFeature<?,?>> WONDER_OAK_KEY = registerKey("wonder_oak");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?,?>>context){
@@ -47,6 +49,10 @@ public class ModConfiguredFeatures {
         register(context, TWISTED_GRASS_KEY,
                 Feature.RANDOM_PATCH,
                 grassPatch(BlockStateProvider.simple(ModBlocks.TWISTED_GRASS.get()), 64));
+
+        register(context, GEOMETRIUS_KEY,
+                Feature.FLOWER,
+                grassPatch(BlockStateProvider.simple(ModBlocks.GEOMETRIUS.get()), 64));
 
     }
 

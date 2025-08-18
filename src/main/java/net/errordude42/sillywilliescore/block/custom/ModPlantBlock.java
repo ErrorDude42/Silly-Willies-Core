@@ -13,7 +13,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class ModPlantBlock extends BushBlock {
 
-    protected ModPlantBlock(Properties properties) {super(properties);}
+    public ModPlantBlock(Properties properties) {super(properties);}
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context)

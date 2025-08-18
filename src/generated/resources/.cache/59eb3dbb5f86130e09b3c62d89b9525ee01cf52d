@@ -1,9 +1,10 @@
-// 1.21.1	2025-08-15T21:47:25.3608868	Loot Tables
+// 1.21.1	2025-08-17T18:52:06.4305242	Loot Tables
 5e8a8f3aeb7fa857ecd28e41a221671f57644f0f data/sillywilliescore/loot_table/blocks/block_of_raw_entangulum.json
 d5d18c3a72fbf16587e78ab90913821355e33e2e data/sillywilliescore/loot_table/blocks/block_of_raw_triangulum.json
 bfb4d69d46bdc3a49c563692e524442347878d15 data/sillywilliescore/loot_table/blocks/chisled_geostone.json
 1421a55fb9d226f8eac98794054df36b7825d9ac data/sillywilliescore/loot_table/blocks/cracked_geostone_bricks.json
 abe7360991312ad95a02f2e34bd757ba2505a552 data/sillywilliescore/loot_table/blocks/entangulumore.json
+d21eab75639d8415e0aa39fee8c9bbc21bc12f69 data/sillywilliescore/loot_table/blocks/geometrius.json
 7225127b45ce65240c6d49b2bb0f85d820feda84 data/sillywilliescore/loot_table/blocks/geostone.json
 aea8d7ac2ea2bad26f1a513f6ed42837d3d89d69 data/sillywilliescore/loot_table/blocks/geostone_bricks.json
 cbee3aa4445fec71695c837348b6728bb47f3afc data/sillywilliescore/loot_table/blocks/geostone_bricks_slab.json

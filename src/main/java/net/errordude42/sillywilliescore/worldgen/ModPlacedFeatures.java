@@ -1,6 +1,5 @@
 package net.errordude42.sillywilliescore.worldgen;
 
-import com.mojang.realmsclient.gui.screens.RealmsGenericErrorScreen;
 import net.errordude42.sillywilliescore.ModBlocks;
 import net.errordude42.sillywilliescore.SillyWilliesCore;
 import net.minecraft.core.Holder;
@@ -22,7 +21,9 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> WONDER_OAK_PLACED_KEY = registerKey("wonder_oak_placed");
 
-    public static final ResourceKey<PlacedFeature> TWISTED_GRASS_PLACED_KEY = registerKey("twisted_grass_placed");
+    public static final ResourceKey<PlacedFeature> TWISTED_GRASS_PLACED_KEY = registerKey("twisted_grass_placed.json");
+
+    public static final ResourceKey<PlacedFeature> GEOMETRIUS_PLACED_KEY = registerKey("geometrius_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context){
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -32,13 +33,19 @@ public class ModPlacedFeatures {
             ));
 
     register(context,TWISTED_GRASS_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.TWISTED_GRASS_KEY),
-            List.of(RarityFilter.onAverageOnceEvery(1), InSquarePlacement.spread(),
-                    PlacementUtils.HEIGHTMAP_WORLD_SURFACE,BiomeFilter.biome()));
-
+            List.of(NoiseThresholdCountPlacement.of(-0.8, 5, 10),
+                    InSquarePlacement.spread(),
+                    PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                    BiomeFilter.biome()));
 
         register(context,WONDER_OAK_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.WONDER_OAK_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(7,0.2f,6),
                         ModBlocks.WONDER_OAK_SAPLING.get()));
+
+        PlacementUtils.register(context, GEOMETRIUS_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEOMETRIUS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP, BiomeFilter.biome()
+        );
     }
 
 

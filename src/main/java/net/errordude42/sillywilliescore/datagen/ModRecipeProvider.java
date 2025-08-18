@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
+import javax.annotation.Nullable;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -303,11 +304,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_STAIRS,ModBlocks.GEOSTONE_COBBLE,1);
         stonecutterResultFromBase(recipeOutput,RecipeCategory.MISC,ModBlocks.GEOSTONE_COBBLE_WALL,ModBlocks.GEOSTONE_COBBLE,1);
 
-
-
+        oneToOneConversionRecipe(recipeOutput,Items.YELLOW_DYE,ModBlocks.GEOMETRIUS.asItem(),"yellow_dye");
     }
 
+    protected static void oneToOneConversionRecipe(RecipeOutput recipeOutput, ItemLike result, ItemLike ingredient, @Nullable String group, int resultCount) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, result, resultCount)
+                .requires(ingredient)
+                .group(group)
+                .unlockedBy(getHasName(ingredient), has(ingredient))
+                .save(recipeOutput, SillyWilliesCore.MOD_ID + ":"+ getItemName(result) + "_from_" +getItemName(ingredient));
+    }
 
+    protected static void oneToOneConversionRecipe(RecipeOutput recipeOutput, ItemLike result, ItemLike ingredient, @Nullable String group) {
+        oneToOneConversionRecipe(recipeOutput, result, ingredient, group, 1);
+    }
 
     protected static void stonecutterResultFromBase(RecipeOutput recipeOutput, RecipeCategory category, ItemLike result, ItemLike material,int resultCount) {
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(material), category, result, resultCount)
