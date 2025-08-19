@@ -18,6 +18,7 @@ import java.util.List;
 public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> TRIANGULUM_ORE_PLACED_KEY = registerKey("triangulum_ore_placed");
+    public static final ResourceKey<PlacedFeature> GEO_TRIANGULUM_ORE_PLACED_KEY = registerKey("geo_triangulum_ore_placed");
 
     public static final ResourceKey<PlacedFeature> WONDER_OAK_PLACED_KEY = registerKey("wonder_oak_placed");
 
@@ -31,6 +32,9 @@ public class ModPlacedFeatures {
     register(context,TRIANGULUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_TRIANGULUM_ORE_KEY),
             ModOrePlacement.rareOrePlacement(6, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64),VerticalAnchor.absolute(-20))
             ));
+        register(context,GEO_TRIANGULUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GEO_TRIANGULUM_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64),VerticalAnchor.absolute(160))
+                ));
 
     register(context,TWISTED_GRASS_PLACED_KEY,configuredFeatures.getOrThrow(ModConfiguredFeatures.TWISTED_GRASS_KEY),
             List.of(NoiseThresholdCountPlacement.of(-0.8, 5, 10),

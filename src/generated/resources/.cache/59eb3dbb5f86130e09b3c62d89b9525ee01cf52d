@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-17T18:52:06.4305242	Loot Tables
+// 1.21.1	2025-08-17T23:14:22.3556121	Loot Tables
 5e8a8f3aeb7fa857ecd28e41a221671f57644f0f data/sillywilliescore/loot_table/blocks/block_of_raw_entangulum.json
 d5d18c3a72fbf16587e78ab90913821355e33e2e data/sillywilliescore/loot_table/blocks/block_of_raw_triangulum.json
 bfb4d69d46bdc3a49c563692e524442347878d15 data/sillywilliescore/loot_table/blocks/chisled_geostone.json
@@ -28,6 +28,7 @@ a150b3dd4072b9cade9209af57804032feabf39d data/sillywilliescore/loot_table/blocks
 51f849479fbfdf989173974c3b293dd143159452 data/sillywilliescore/loot_table/blocks/stripped_wonder_oak_log.json
 86ce769dbe3ba468acf761be5bd7400b7dd852f7 data/sillywilliescore/loot_table/blocks/stripped_wonder_oak_wood.json
 df1e780521d3af4067daccd189f7d171fe571f6e data/sillywilliescore/loot_table/blocks/triangulumore_deepslate.json
+d6e1719b1eb62254c6df2a6bc06ca2b179559904 data/sillywilliescore/loot_table/blocks/triangulumore_geostone.json
 a5a3a42dbf68739ca449593e2c544e2291ab2d89 data/sillywilliescore/loot_table/blocks/triangulum_bricks.json
 20eb24d39e2c3d50c8141c4e8803ef0043f8feed data/sillywilliescore/loot_table/blocks/triangulum_bricks_button.json
 1306979678896da6bd7d86b4301b2928ae3816be data/sillywilliescore/loot_table/blocks/triangulum_bricks_pressure_plate.json

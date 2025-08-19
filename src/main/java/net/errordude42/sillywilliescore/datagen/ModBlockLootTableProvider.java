@@ -66,6 +66,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
      add(ModBlocks.TRIANGULUMORE_DEEPSLATE.get(),
              block -> createOreDrop(ModBlocks.TRIANGULUMORE_DEEPSLATE.get(), ModItems.TRIANGULUMRAW.get())
         );
+        add(ModBlocks.TRIANGULUMORE_GEOSTONE.get(),
+                block -> createOreDrop(ModBlocks.TRIANGULUMORE_GEOSTONE.get(), ModItems.TRIANGULUMRAW.get())
+        );
      add(ModBlocks.ENTANGULUM_ORE.get(),
              block -> createOreDrop(ModBlocks.ENTANGULUM_ORE.get(),ModItems.RAW_ENTANGULUM.get())
              );

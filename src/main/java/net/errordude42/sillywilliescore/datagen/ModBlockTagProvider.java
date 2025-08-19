@@ -57,6 +57,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.ENTANGULUM_ORE.get())
+                .add(ModBlocks.TRIANGULUMORE_GEOSTONE.get())
                 .add(ModBlocks.TRIANGULUMORE_DEEPSLATE.get());
 
         tag(BlockTags.SLABS)

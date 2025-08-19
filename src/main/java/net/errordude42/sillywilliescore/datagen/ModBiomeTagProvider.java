@@ -20,6 +20,7 @@ public class ModBiomeTagProvider extends BiomeTagsProvider {
     public void addTags(HolderLookup.Provider provider) {
         tag(ModTags.Biomes.IS_GEO)
                 .add(ModBiomes.GEO_PLAINS)
+                .add(ModBiomes.GEO_OCEAN)
                 .add(ModBiomes.GEO_FOREST);
 
     }

@@ -27,6 +27,8 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?,?>> OVERWORLD_TRIANGULUM_ORE_KEY = registerKey("triangulum_ore");
 
+    public static final ResourceKey<ConfiguredFeature<?,?>> GEO_TRIANGULUM_ORE_KEY = registerKey("geo_triangulum_ore");
+
     public static final ResourceKey<ConfiguredFeature<?,?>> TWISTED_GRASS_KEY = registerKey("twisted_grass");
 
     public static final ResourceKey<ConfiguredFeature<?,?>> GEOMETRIUS_KEY = registerKey("geometrius");
@@ -39,12 +41,19 @@ public class ModConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest endReplaceables = new BlockMatchTest(Blocks.END_STONE);
+        RuleTest geostoneReplacables = new BlockMatchTest(ModBlocks.GEOSTONE.get());
 
         List<OreConfiguration.TargetBlockState> overworldTriangulumOres = List.of(
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.TRIANGULUMORE_DEEPSLATE.get().defaultBlockState())
         );
 
+
+
         register(context, OVERWORLD_TRIANGULUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTriangulumOres,9));
+
+        register(context, GEO_TRIANGULUM_ORE_KEY, Feature.ORE, new OreConfiguration(geostoneReplacables,
+                ModBlocks.TRIANGULUMORE_GEOSTONE.get().defaultBlockState(),
+                14));
 
         register(context, TWISTED_GRASS_KEY,
                 Feature.RANDOM_PATCH,

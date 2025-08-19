@@ -18,6 +18,8 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_TRIANGULUM_ORE = registerKey("add_triangulum_ore");
 
+    public static final ResourceKey<BiomeModifier> ADD_GEO_TRIANGULUM_ORE = registerKey("add_geo_triangulum_ore");
+
     public static final ResourceKey<BiomeModifier> ADD_TWISTED_GRASS = registerKey("add_twisted_grass");
 
     public static final ResourceKey<BiomeModifier> ADD_GEOMETRIUS = registerKey("add_geometrius");
@@ -31,6 +33,12 @@ public class ModBiomeModifiers {
         context.register(ADD_TRIANGULUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.TRIANGULUM_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+
+        context.register(ADD_GEO_TRIANGULUM_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(ModTags.Biomes.IS_GEO),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GEO_TRIANGULUM_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
 

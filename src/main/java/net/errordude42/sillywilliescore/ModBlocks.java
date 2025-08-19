@@ -513,6 +513,11 @@ public class ModBlocks {
                             )
             );
 
+    public static final DeferredBlock<Block> TRIANGULUMORE_GEOSTONE = registerBlock("triangulumore_geostone",
+            () -> new Block(BlockBehaviour.Properties.of().strength(6f).sound(SoundType.DEEPSLATE).mapColor(MapColor.DEEPSLATE).
+                    requiresCorrectToolForDrops()
+            ));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

@@ -9,8 +9,11 @@ import net.errordude42.sillywilliescore.loot.ModLootModifiers;
 import net.errordude42.sillywilliescore.util.ModWoodTypes;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -33,6 +36,8 @@ public class SillyWilliesCore {
     public static final String MOD_ID = "sillywilliescore";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
+
+    public static final ResourceKey<Level> GEO_KEY = ResourceKey.create(Registries.DIMENSION,SillyWilliesCore.rl("geo"));
 
     public static ResourceLocation rl(String s)
     {

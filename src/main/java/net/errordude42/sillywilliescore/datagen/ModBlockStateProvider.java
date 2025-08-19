@@ -46,6 +46,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.GEOSTONE_BRICKS);
         blockWithItem(ModBlocks.MOSSY_GEOSTONE_BRICKS);
         blockWithItem(ModBlocks.WONDER_OAK_PLANKS);
+        blockWithItem(ModBlocks.TRIANGULUMORE_GEOSTONE);
 
         pillarBlock(ModBlocks.CHISLED_GEOSTONE,"chisled_geostone" );
 
