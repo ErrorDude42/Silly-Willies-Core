@@ -511,7 +511,7 @@
               -0.455,
               -0.19
             ],
-            "depth": 1,
+            "depth": 2,
             "erosion": [
               -1,
               1
@@ -540,12 +540,9 @@
             ],
             "humidity": 0,
             "continentalness": -1,
-            "erosion": 0,
+            "erosion": 1,
             "weirdness": 0.25,
-            "depth": [
-              -0.25,
-              -1.5
-            ],
+            "depth": 0,
             "offset": 0
           }
         },
@@ -555,10 +552,7 @@
             "continentalness": 0.5,
             "erosion": 0,
             "humidity": 0,
-            "depth": [
-              -1,
-              -2
-            ],
+            "depth": 0,
             "offset": 0,
             "temperature": [
               1,

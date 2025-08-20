@@ -2,7 +2,8 @@
   "carvers": {
     "air": [
       "minecraft:cave",
-      "minecraft:cave_extra_underground"
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
     ]
   },
   "downfall": 0,
@@ -22,5 +23,5 @@
   "has_precipitation": false,
   "spawn_costs": {},
   "spawners": {},
-  "temperature": 2
+  "temperature": -10
 }
